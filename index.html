@@ -67,15 +67,19 @@
             </ul>
 
             <figure class="gallery-catalog">
-                <img src="img/slider1.jpg" alt="Фон с перфоратором" width="500" height="300">
-                <p>Перфоратор</p>
-                <p>Настоящие мужские игрушки</p>
-                <img src="img/slider2.jpg" alt="Фон с дрелью" width="500" height="300">
-                <p>Дрели</p>
-                <p>Соседям на радость</p>
-                <a class="button" href="catalog.html">Открыть каталог</a> 
-                <button class="gallary-button-back" type="button">Назад</button>
-                <button class="gallary-button-next" type="button" disabled>Вперед</button>
+                <div class="gallery-content1">
+                    <img class="background1" src="img/slider1.jpg" alt="Фон с перфоратором" width="500" height="300">
+                    <p>Перфоратор</p>
+                    <p>Настоящие мужские игрушки</p>
+                </div>
+                <div class="gallery-content2">
+                    <img class="background1" src="img/slider2.jpg" alt="Фон с дрелью" width="500" height="300">
+                    <p>Дрели</p>
+                    <p>Соседям на радость</p>
+                    <a class="button" href="catalog.html">Открыть каталог</a> <!--использовать font: insherit наследование, от родителя (body) если class=button и иимеет одинаковые стили-->
+                    <button class="gallary-button-back" type="button">Назад</button>
+                    <button class="gallary-button-next" type="button" disabled>Вперед</button>
+                </div>
             </figure>          
         </section>
 
@@ -137,23 +141,25 @@
                 <li class="service-item"><a href="#">Кредит</a></li>
             </ul>
         </section>
-        <section class="info-company">
-            <h2>Компания "Техномарт"</h2>
-            <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для <br> ремонта и строительства не оставит равнодушными любителей сэкономить на <br>гастарбайтерах.</p>
-            <p>Мы можем доставить ваш товар в самые отдаленные точки России! <br> Техномарт работает со многими транспортными компаниями: <br> </p>
-            <ul class="delivery-list">
-                <li class="delivery-item">Деловые линии</li>
-                <li class="delivery-item">Автотрейдинг</li>
-                <li class="delivery-item">ЖелДорЭкспедиция</li>
-            </ul>
-           <a class="button" href="index.html">Подробнее о компании</a>
-        </section>
-        <section class="contacts">
-            <h2>Контакты</h2>
-            <p>Вы можете забрать товар сами, <br> заехав в наш офис: <br> </p>
-            <img src="img/map.jpg" alt="map" width="256" height="137">
-            <a class="button" href="index.html"><p>Заблудились?Напишите нам!</p></a>
-        </section>       
+        <div class="index-colums">
+            <section class="info-company">
+                <h2>Компания "Техномарт"</h2>
+                <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для <br> ремонта и строительства не оставит равнодушными любителей сэкономить на <br>гастарбайтерах.</p>
+                <p>Мы можем доставить ваш товар в самые отдаленные точки России! <br> Техномарт работает со многими транспортными компаниями: <br> </p>
+                <ul class="delivery-list">
+                    <li class="delivery-item">Деловые линии</li>
+                    <li class="delivery-item">Автотрейдинг</li>
+                    <li class="delivery-item">ЖелДорЭкспедиция</li>
+                </ul>
+            <a class="button" href="index.html">Подробнее о компании</a>
+            </section>
+            <section class="contacts">
+                <h2>Контакты</h2>
+                <p>Вы можете забрать товар сами, <br> заехав в наш офис: <br> </p>
+                <img src="img/map.jpg" alt="map" width="256" height="137">
+                <a class="button" href="index.html"><p>Заблудились?Напишите нам!</p></a>
+            </section>  
+        </div>     
     </main>
     <footer class="main-footer">
         <a class="logo footer-logo" href="index.html"><img src="img/technomart-logo.svg" alt="Логотип Техномарт" width="100" height="100"></a>
@@ -171,7 +177,7 @@
             <li class="footer-offer-item"><a href="index.html">Инструмент</a></li>
             <li class="footer-offer-item"><a href="index.html">Спецпредложения</a></li>
         </ul>
-        <p>2010–2019 Компания «Техномарт» <br> Все права защищены <br></p> <!--добавить значок с-->
+        <p>2010–2019 Компания «Техномарт» <br> Все права защищены &#169; <br></p> <!--добавить значок с-->
         <ul class="footer-social">
             <li><a class="social-button" href="index.html"><img src="img/vk-icon.svg" alt="Vk" width="40" height="40"></a></li>
             <li><a class="social-button" href="index.html"><img src="img/facebook-icon.svg" alt="Facebook" width="40" height="40"></a></li>

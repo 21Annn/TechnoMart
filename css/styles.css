@@ -51,12 +51,22 @@
 /* Variables */
 
 :root {
+    --bright-red: #EE3643;
+    --dark-green: #63A63E;
+    --yellow: #FFBF47;
+    --light-blu: #3BBCE3;
+    --lilac: #DC91D8;
+    --light-green: #8ED78F;
+    --dark-yellow: #FFC047;
+    --deep-light-blue: #32425C;
+    --deep-dark-blue: #32425C;
+
 
 }
 
 /* Global */
 
-body {
+.page-body {
     min-width: 960px;
     margin: 0 auto;
     padding: 0;
@@ -91,8 +101,13 @@ a {
 
 }
 
-.main-header-logo {
-
+.logo {
+    padding: 10px 15px;
+    background-color: var(--bright-red);
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+}
+.main-logo {
+    
 }
 
 .search-icon {

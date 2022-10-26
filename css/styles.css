@@ -1,7 +1,7 @@
 /* Fonts */
 
 @font-face {
-    font-family: ;
+    font-family: "Cuprum";
     src: url("../fonts/cuprum.woff2") format("woff2"),
     url("../fonts/cuprum.woff") format("woff");
     font-weight: 400;
@@ -9,7 +9,7 @@
 }
 
 @font-face {
-    font-family: ;
+    font-family: "Cuprum Bold";
     src: url("../fonts/cuprumbold.woff2") format("woff2"),
     url("../fonts/cuprumbold.woff") format("woff");
     font-weight: 700;
@@ -17,7 +17,7 @@
 }
 
 @font-face {
-    font-family: ;
+    font-family: "Cuprum Italic";
     src: url("../fonts/cuprumitalic.woff2") format("woff2"),
         url("../fonts/cuprumitalic.woff") format("woff");
     font-weight: 400;
@@ -25,7 +25,7 @@
 }
 
 @font-face {
-    font-family: ;
+    font-family: "Cuprum Bold Italic";
     src: url("../fonts/cuprumbolditalic.woff2") format("woff2"),
         url("../fonts/cuprumbolditalic.woff") format("woff");
     font-weight: 700;
@@ -33,7 +33,7 @@
 }
 
 @font-face {
-    font-family: ;
+    font-family: "PT Sans";
     src: url("../fonts/ptsans.woff2") format("woff2"),
         url("../fonts/ptsans.woff") format("woff");
     font-weight: 400;
@@ -41,7 +41,7 @@
 }
 
 @font-face {
-    font-family: ;
+    font-family: "PT Sans Bold";
     src: url("../fonts/ptsansbold.woff2") format("woff2"),
         url("../fonts/ptsansbold.woff") format("woff");
     font-weight: 700;
@@ -59,10 +59,10 @@
     --light-green: #8ED78F;
     --dark-yellow: #FFC047;
     --deep-light-blue: #32425C;
-    --deep-dark-blue: #32425C;
+    --deep-dark-blue: #293449;
     --basic-white: #ffffff;
 
-    --color-backrgoud :
+    --color-backrgoud: #f5f5f5;
 
 
 }
@@ -73,14 +73,16 @@
     min-width: 960px;
     margin: 0 auto;
     padding: 0;
-    font-family: ;
-    font-size: ;
-    line-height: ;
-    font-weight: ;
-    color: ;
-    /* text-transform: ; */
-    background-color: ;
-    /* background-image: ; */
+    /* 
+    font-family: "Cuprum";
+    font-size: 22px;
+    line-height: 20px;
+    font-weight: 400;
+    color: var(--basic-white);
+    text-transform: ;
+    background-color: var(--color-backrgoud) ;
+    background-image: ; 
+    */
     background-position: top center;
     background-repeat: no-repeat;
 
@@ -99,11 +101,21 @@ a {
 
 /* Navigation */
 
+.main-header {
+    background-color: var(--color-backrgoud);
+}
 .main-nav-order {
     width: 960px;
     margin: 0 auto;
-    height: ;
-
+    /* height: ; */
+}
+.nav-site-item a {
+    font-family: "Cuprum", sans-serif;
+    color: var(--basic-white);
+    background-color: var(--deep-light-blue);
+}
+.nav-site-item a:hover {
+    background-color: var(--deep-dark-blue);
 }
 
 .logo {
@@ -115,7 +127,7 @@ a {
 
 }
 .search-icon {
-    float: ;
+    /* float: ; */
     padding: 5px;
     margin-top: 7px;
     border: none;
@@ -123,22 +135,42 @@ a {
 .search-icon:hover {
 
 }
+/* Order info */
+
 .order-info {
     display: block;
-    color: ;
+    font-family: "Cuprum", sans-serif;
+    font-size: 14px;
+    background-color: var(--deep-dark-blue);
     text-align: center;
-    padding: ;
-    font-size: ;
+    padding: 10px;
     list-style: none;
 }
-.header-info-shop {
-    color: ;
-    font-style: italic;
-    display: block;
-    color: ;
-    text-align: center;
-    padding: ;
+.order { 
+    color: var(--basic-white);
+}
+.order-3 {
+    padding: 10px 10px;
+    background-color: var(--dark-green);
+}
+
+.contacts-phone {
+    font-family: "Cuprum", sans-serif;
     font-size: ;
+    /* text-align: center; */
+    padding: 10px 40px;
+    color: #EE3643;
+    border: 3px solid var(--basic-white);
+}
+.adress {
+    font-family: "Cuprum", sans-serif;
+}
+.header-info-shop {
+    color: var(--bright-red);
+    font-family: "Cuprum Italic", serif;
+    display: block;
+    text-align: center;
+    font-size: 14px;
 }
 .login-link {
     display: block;
@@ -158,10 +190,22 @@ a {
 .nav-site-item {
 
 }
+
+/* Galerry catalog */
+
 .background1,
 .background2 {
     background-color: var(--deep-dark-blue);
     border: 2px solid var(--basic-white);
 }
 
+/* Button */
+
+.button {
+    font-family: "Cuprum", sans-serif;
+    color: var(--basic-white);
+    padding: 10px 15px;
+    background-color: var(--bright-red);
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);    
+}
 

@@ -62,7 +62,7 @@
     --deep-dark-blue: #293449;
     --basic-white: #ffffff;
 
-    --color-backrgoud: #f5f5f5;
+    --color-backrgoud: #bdcad9;
 
 
 }
@@ -85,7 +85,6 @@
     */
     background-position: top center;
     background-repeat: no-repeat;
-
 }
 
 img {
@@ -102,7 +101,7 @@ a {
 /* Navigation */
 
 .main-header {
-    background-color: var(--color-backrgoud);
+    background: var(--color-backrgoud);
 }
 .main-nav-order {
     width: 960px;
@@ -123,18 +122,18 @@ a {
     background-color: var(--bright-red);
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
 }
-.main-logo {
+/* .main-logo {
 
-}
+} */
 .search-icon {
     /* float: ; */
     padding: 5px;
     margin-top: 7px;
     border: none;
 }
-.search-icon:hover {
+/* .search-icon:hover {
 
-}
+} */
 /* Order info */
 
 .order-info {
@@ -156,7 +155,7 @@ a {
 
 .contacts-phone {
     font-family: "Cuprum", sans-serif;
-    font-size: ;
+    font-size: 14px;
     /* text-align: center; */
     padding: 10px 40px;
     color: #EE3643;
@@ -164,6 +163,20 @@ a {
 }
 .adress {
     font-family: "Cuprum", sans-serif;
+    font-size: 14px;
+    color: var(--deep-light-blue);
+}
+.login {
+    font-family: "Cuprum", sans-serif;
+    color: var(--deep-light-blue);
+}
+.button-login {
+    border: 1px solid var(--basic-white);
+    background-color: var(--basic-white);
+}
+.button-registration {
+    border: 1px solid var(--basic-white);
+    background-color: var(--basic-white); /*почему если делать для общего класса то "вход" растягивается на всю ширину */
 }
 .header-info-shop {
     color: var(--bright-red);
@@ -174,22 +187,20 @@ a {
 }
 .login-link {
     display: block;
-    color: ;
     text-align: center;
-    padding: ;
-    font-size: ;
+    font-size: 14px;
     list-style: none;
 }
-.main-nav-site {
+.main-nav {
     display: block;
-    color: ;
+    background-color: var(--deep-dark-blue);
     text-align: center;
-    padding: ;
-    font-size: ;
+    padding: 0px;
+    font-size: 14px;
 }
-.nav-site-item {
+/* .nav-site-item {
 
-}
+} */
 
 /* Galerry catalog */
 

@@ -126,10 +126,13 @@ a {
 
 } */
 .search-icon {
-    /* float: ; */
+    /* float: left; */
     padding: 5px;
     margin-top: 7px;
     border: none;
+    margin-left: 40px;
+    background-image: url('../img/icon-search.svg');
+    background-repeat: no-repeat;
 }
 /* .search-icon:hover {
 
@@ -148,17 +151,29 @@ a {
 .order { 
     color: var(--basic-white);
 }
+.order-1 {
+    padding: 10px 10px;
+    background-image: url('../img/icon-bookmark.svg');
+    background-repeat: no-repeat;
+}
+.order-2 {
+    padding: 10px 10px;
+    background-image: url('../img/icon-cart.svg');
+    background-repeat: no-repeat;
+}
 .order-3 {
     padding: 10px 10px;
     background-color: var(--dark-green);
 }
+
+/* Block-2 in navigation */
 
 .contacts-phone {
     font-family: "Cuprum", sans-serif;
     font-size: 14px;
     /* text-align: center; */
     padding: 10px 40px;
-    color: #EE3643;
+    color: var(--bright-red);
     border: 3px solid var(--basic-white);
 }
 .adress {
@@ -167,16 +182,29 @@ a {
     color: var(--deep-light-blue);
 }
 .login {
+    border: 1px solid var(--basic-white);
+    background-color: var(--basic-white);
+    background-image: url('../img/icon-logout.svg');
+    background-repeat: no-repeat;
+}
+.button-login {
     font-family: "Cuprum", sans-serif;
     color: var(--deep-light-blue);
 }
-.button-login {
+.button-login:hover {
+    color: var(--bright-red);
+}
+.registration {
     border: 1px solid var(--basic-white);
     background-color: var(--basic-white);
 }
 .button-registration {
+    color: var(--deep-dark-blue);
     border: 1px solid var(--basic-white);
-    background-color: var(--basic-white); /*почему если делать для общего класса то "вход" растягивается на всю ширину */
+    /* background-color: var(--basic-white); почему если делать для общего класса то "вход" растягивается на всю ширину */
+}
+.button-registration:hover {
+    color: var(--bright-red);
 }
 .header-info-shop {
     color: var(--bright-red);
@@ -187,13 +215,14 @@ a {
 }
 .login-link {
     display: block;
+    font-family: "Cuprum", sans-serif;
     text-align: center;
     font-size: 14px;
     list-style: none;
 }
 .main-nav {
     display: block;
-    background-color: var(--deep-dark-blue);
+    background-color: var(--deep-light-blue);
     text-align: center;
     padding: 0px;
     font-size: 14px;
@@ -201,7 +230,9 @@ a {
 /* .nav-site-item {
 
 } */
-
+.hidden {
+    visibility: hidden;
+}
 /* Galerry catalog */
 
 .background1,

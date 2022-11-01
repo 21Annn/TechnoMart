@@ -61,32 +61,26 @@
     --deep-light-blue: #32425C;
     --deep-dark-blue: #293449;
     --basic-white: #ffffff;
+    --basic-black: #000000;
 
-    --color-backrgoud: #bdcad9;
-
-
+    --color-backrgoud: #f3f7f8;
 }
 
 /* Global */
 
+.page {
+    height: 100%;
+}
 .page-body {
     min-width: 960px;
     margin: 0 auto;
     padding: 0;
-    /* 
-    font-family: "Cuprum";
+    font-family: "Cuprum", sans-serif;
     font-size: 22px;
     line-height: 20px;
     font-weight: 400;
-    color: var(--basic-white);
-    text-transform: ;
-    background-color: var(--color-backrgoud) ;
-    background-image: ; 
-    */
-    background-position: top center;
-    background-repeat: no-repeat;
+    color: var(--basic-black); 
 }
-
 img {
     max-width: 100%;  /*такие же свойства добавить на myportfolio для всех картинок, это базовая настройка*/
     height: auto;
@@ -97,50 +91,63 @@ li {
 a {
     text-decoration: none;
 }
+.hidden {
+    visibility: hidden;
+}
 
 /* Navigation */
 
 .main-header {
     background: var(--color-backrgoud);
 }
-.main-nav-order {
-    width: 960px;
-    margin: 0 auto;
-    /* height: ; */
-}
-.nav-site-item a {
-    font-family: "Cuprum", sans-serif;
-    color: var(--basic-white);
-    background-color: var(--deep-light-blue);
-}
-.nav-site-item a:hover {
-    background-color: var(--deep-dark-blue);
+.top-main-header {
+
 }
 
+.top-main-nav-wrapper {
+
+}
+.main-logo-wrapper {
+
+}
 .logo {
-    padding: 10px 15px;
+    padding: 10px 20px;
     background-color: var(--bright-red);
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
 }
-/* .main-logo {
+.form-search {
 
+}
+.form-search:active {
+    height: 20%;
+    width: 50%;
+    background-color: var(--basic-white);
+}
+.form-search::-moz-placeholder {
+   color: var(--basic-white);  /*  почему не красится текст */
+}
+/* .search-icon {
+    color: var(--bright-red);
+}
+.search-icon:hover {
+    color: var(--basic-white);
+}
+.search-icon:active {
+    color: var(--bright-red);
 } */
-.search-icon {
-    /* float: left; */
-    padding: 5px;
-    margin-top: 7px;
+.search-input {
+    font-size: 17px;
+    padding: 0px;
+    margin: 0px;
     border: none;
-    margin-left: 40px;
-    background-image: url('../img/icon-search.svg');
-    background-repeat: no-repeat;
+    outline: 0;
+    color: var(--basic-black);
+    background-color: transparent;
 }
-/* .search-icon:hover {
+.order-info-wrapper {
 
-} */
-/* Order info */
-
+}
 .order-info {
-    display: block;
     font-family: "Cuprum", sans-serif;
     font-size: 14px;
     background-color: var(--deep-dark-blue);
@@ -151,60 +158,31 @@ a {
 .order { 
     color: var(--basic-white);
 }
-.order-1 {
+.order-info .order-1 {
     padding: 10px 10px;
     background-image: url('../img/icon-bookmark.svg');
     background-repeat: no-repeat;
 }
-.order-2 {
+.order-info .order-2 {
     padding: 10px 10px;
     background-image: url('../img/icon-cart.svg');
     background-repeat: no-repeat;
 }
-.order-3 {
+.order-info .order-3 {
     padding: 10px 10px;
     background-color: var(--dark-green);
 }
+.button-bookmark {
 
-/* Block-2 in navigation */
+}
+.button-basket {
 
-.contacts-phone {
-    font-family: "Cuprum", sans-serif;
-    font-size: 14px;
-    /* text-align: center; */
-    padding: 10px 40px;
-    color: var(--bright-red);
-    border: 3px solid var(--basic-white);
 }
-.adress {
-    font-family: "Cuprum", sans-serif;
-    font-size: 14px;
-    color: var(--deep-light-blue);
+.button-checkout {
+
 }
-.login {
-    border: 1px solid var(--basic-white);
-    background-color: var(--basic-white);
-    background-image: url('../img/icon-logout.svg');
-    background-repeat: no-repeat;
-}
-.button-login {
-    font-family: "Cuprum", sans-serif;
-    color: var(--deep-light-blue);
-}
-.button-login:hover {
-    color: var(--bright-red);
-}
-.registration {
-    border: 1px solid var(--basic-white);
-    background-color: var(--basic-white);
-}
-.button-registration {
-    color: var(--deep-dark-blue);
-    border: 1px solid var(--basic-white);
-    /* background-color: var(--basic-white); почему если делать для общего класса то "вход" растягивается на всю ширину */
-}
-.button-registration:hover {
-    color: var(--bright-red);
+.header-info-shop-wrapper {
+
 }
 .header-info-shop {
     color: var(--bright-red);
@@ -213,6 +191,24 @@ a {
     text-align: center;
     font-size: 14px;
 }
+.contacts-phone {
+    font-family: "Cuprum", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 10px 40px;
+    color: var(--bright-red);
+    background-image: url(/img/icon-phone.svg);
+    border: 3px solid var(--basic-white);
+    background-repeat: no-repeat;
+}
+.adress {
+    font-family: "Cuprum", sans-serif;
+    font-size: 14px;
+    color: var(--deep-light-blue);
+}
+.login-link-wrapper {
+
+}
 .login-link {
     display: block;
     font-family: "Cuprum", sans-serif;
@@ -220,18 +216,154 @@ a {
     font-size: 14px;
     list-style: none;
 }
-.main-nav {
-    display: block;
-    background-color: var(--deep-light-blue);
-    text-align: center;
-    padding: 0px;
-    font-size: 14px;
+.login-link .login {
+    background-image: url('../img/icon-logout.svg');
+    background-repeat: no-repeat;
 }
-/* .nav-site-item {
+.button-login {
+    padding: 10px 30px;
+    color: var(--deep-light-blue);
+    border: 1px solid var(--basic-white);
+    background-color: var(--basic-white);
+}
+.button-login:hover {
+    color: var(--bright-red);
+}
+.login-link .registration {
+    margin-top: 20px;
+}
+.button-registration {
+    color: var(--deep-dark-blue);
+    border: 1px solid var(--basic-white);
+    padding: 10px 30px;
+    color: var(--deep-light-blue);
+    border: 1px solid var(--basic-white);
+    background-color: var(--basic-white);
+}
+.button-registration:hover {
+    color: var(--bright-red);
+} 
+.nav-site-wrapper {
+    font-size: 14px;
+    background-color: var(--deep-light-blue);
+}
+.nav-site-list {
+    background-color: var(--deep-light-blue);
 
-} */
-.hidden {
-    visibility: hidden;
+}
+.nav-site-item {
+    
+}
+.nav-site-item a {
+    font-family: "Cuprum", sans-serif;
+    color: var(--basic-white);
+}
+.nav-site-item a:hover {
+    background-color: var(--deep-dark-blue);
+}
+/* Block Main */
+
+.container {
+
+}
+.feature {
+
+}
+.feature-list {
+    border: 1px solid var(--basic-black);
+
+}
+.material {
+    border: 1px solid transparent;
+    color: var(--basic-white);
+    background-color: var(--dark-yellow);
+    padding: 40px 40px;
+}
+.material a {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    width: 135px;
+    height: 38;
+    padding: 10px 0;
+    border: 1px solid transparent;
+    color: var(--basic-white);
+    background-color: rgba(255,255,255,.3);
+ /* почему мы должны использовать цвета из root если там нельзя сделать прозначность и приходится испольо
+зовать rgba */
+} 
+.instrument {
+    border: 1px solid transparent;
+    color: var(--basic-white);
+    background-color: var(--light-blu);
+    padding: 40px 40px;
+}
+.instrument a {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    width: 135px;
+    height: 38;
+    padding: 10px 0;
+    border: 1px solid transparent;
+    color: var(--basic-white);
+    background-color: rgba(255,255,255,.3);
+}
+.construction {
+    border: 1px solid transparent;
+    color: var(--basic-white);
+    background-color: var(--lilac);
+    padding: 40px 40px;
+}
+.construction a {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    width: 135px;
+    height: 38;
+    padding: 10px 0;
+    border: 1px solid transparent;
+    color: var(--basic-white);
+    background-color: rgba(255,255,255,.3);
+}
+.sale {
+    border: 1px solid transparent;
+    color: var(--basic-white);
+    background-color: var(--dark-green);
+    padding: 40px 40px;
+}
+.sale a {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    width: 135px;
+    height: 38;
+    padding: 10px 0;
+    border: 1px solid transparent;
+    color: var(--basic-white);
+    background-color: rgba(255,255,255,.3); 
+}
+.delivery {
+    border: 1px solid transparent;
+    color: var(--basic-white);
+    background-color: var(--yellow);
+    padding: 40px 40px;
+}
+.delivery a {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    width: 135px;
+    height: 38;
+    padding: 10px 0;
+    border: 1px solid transparent;
+    color: var(--basic-white);
+    background-color: rgba(255,255,255,.3);
 }
 /* Galerry catalog */
 
@@ -247,7 +379,9 @@ a {
     font-family: "Cuprum", sans-serif;
     color: var(--basic-white);
     padding: 10px 15px;
-    background-color: var(--bright-red);
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);    
+    background-color: var(--bright-red);   
+}
+.button a {
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5); 
 }
 

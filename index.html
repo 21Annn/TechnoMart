@@ -19,38 +19,50 @@
 <body class="page-body">
     <header class="main-header">
         <nav clas="top-main-nav">
-            <div class="logo main-logo">
-                <a href="index.html"><img src="img/technomart-logo.svg" alt="Логотип Техномарт" width="108" height="18"></a> <!--Сделать оформление кнопки, позже убрать стайл:бэкграунд-->
+            <div class="top-main-nav-wrapper">  <!--этот див нужен для бэкгараундной половски по весь экран где расположен логотип -->
+                <div class="main-logo-wrapper">
+                    <a href="index.html"><img class="logo" src="img/technomart-logo.svg" alt="Логотип Техномарт" width="108" height="18"></a> <!--попробовать оформить кнопку не через бордер а через outline-->
+                </div>
+                    
+                <form class="form-search" action="#" method="get">
+                    <label>
+                        <img class="search-icon" src="/img/icons-search.svg" width="17" height="17"> 
+                        <input class="search-input" type="text" name="search" placeholder="Поиск">  
+                    </label>
+                </form>
+                <div class="order-info-wrapper">
+                    <ul class="order-info">
+                        <li class="order-info order-1"><a class="order button-bookmark" href="index.html">Закладки: 0</a></li>
+                        <li class="order-info order-2"><a class="order button-basket" href="index.html">Корзина: 0</a></li>
+                        <li class="order-info order-3"><a class="order button-checkout" href="index.html">Оформить заказ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="header-info-shop-wrapper"> <!--этот див нужен для бэкгараундной половски по весь экран где расположен весь контент -->
+                        <p class="header-info-shop">Интернет-магазин <br> строительных материалов <br> и инструментов для ремонта <br></p>
+                        <a class="contacts-phone" href="tel:78125550555">+7 (812) 555 - 05 - 55</a>
+                        <p class="adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+                    </div>
+                    <div class="login-link-wrapper">    
+                        <ul class="login-link">
+                            <li class="login-link login"><a class="button-login" href="index.html">Войти</a></li>
+                            <li class="login-link registration"><a class="button-registration" href="index.html">Регистрация</a></li> 
+                        </ul>
+                    </div>
+                </div>    
+            
+                <div clas="nav-site-wrapper">        
+                    <ul class="nav-site-list">
+                        <li class="nav-site-item"><a href="index.html">Главная</a></li>
+                        <li class="nav-site-item"><a href="index.html">Компания</a></li>
+                        <li class="nav-site-item"><a href="catalog.html">Каталог</a></li>
+                        <li class="nav-site-item"><a href="index.html">Новости</a></li>
+                        <li class="nav-site-item"><a href="index.html">Спецпредложения</a></li>
+                        <li class="nav-site-item"><a href="index.html">Доставка</a></li>
+                        <li class="nav-site-item"><a href="index.html">Контакты</a></li>
+                    </ul>
+                </div>    
             </div>
-            <form action="#" method="get">
-                <label>
-                    <input class="search-icon" type="text" name="search" placeholder="Поиск">
-                </label>
-            </form>
-            <ul class="order-info">
-                <li class="order-info order-1"><a class="order button-bookmark" href="index.html">Закладки: 0</a></li>
-                <li class="order-info order-2"><a class="order button-basket" href="index.html">Корзина: 0</a></li>
-                <li class="order-info order-3"><a class="order button-checkout" href="index.html">Оформить заказ</a></li>
-            </ul>
-            <p class="header-info-shop">Интернет-магазин <br> строительных материалов <br> и инструментов для ремонта <br></p>
-            <a class="contacts-phone" href="tel:78125550555">+7 (812) 555 - 05 - 55</a>
-            <p class="adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-            <ul class="login-link">
-                <li class="login-link login"><a class="button-login" href="index.html">Войти</a></li>
-                <li class="login-link registration"><a class="button-registration" href="index.html">Регистрация</a></li> <!--добавить класс-->
-            </ul>
-        </nav>
-
-        <nav class="main-nav">        
-            <ul class="nav-site-list">
-                <li class="nav-site-item"><a href="index.html">Главная</a></li>
-                <li class="nav-site-item"><a href="index.html">Компания</a></li>
-                <li class="nav-site-item"><a href="catalog.html">Каталог</a></li>
-                <li class="nav-site-item"><a href="index.html">Новости</a></li>
-                <li class="nav-site-item"><a href="index.html">Спецпредложения</a></li>
-                <li class="nav-site-item"><a href="index.html">Доставка</a></li>
-                <li class="nav-site-item"><a href="index.html">Контакты</a></li>
-            </ul>
         </nav>
     </header>
     <main class="container">
@@ -65,7 +77,6 @@
                 <li class="feature-item sale">Скидки 50% <a href="index.html">на 350 товаров</a></li>
                 <li class="feature-item delivery">Доставка <a href="index.html">бесплатно</a></li>
             </ul>
-
             <figure class="gallery-catalog">
                 <div class="gallery-content1">
                     <img class="background1" src="img/slider1.jpg" alt="Фон с перфоратором" width="500" height="300">
@@ -128,18 +139,20 @@
             </ul>
         </section>
         <section class="service">
-            <h2>Сервисы</h2>
-            <p>Хороший интернет-магазин отличается от плохого не только ценами! <br> Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-            <ul class="service-list">
-                <li class="service-item">
-                    <a href="#">Доставка</a>
-                    <p>Доставка</p>
-                    <p>Мы с удовольствием доставим ваш товар прямо <br> к вашему подъезду совершенно бесплатно! <br> Ведь мы неплохо заработаем, <br> поднимая его на ваш этаж!</p>
-                    <img src="img/service-delivery.png" alt="delivery" width="426" height="227">
-                </li>
-                <li class="service-item"><a href="#">Гарантия</a></li>
-                <li class="service-item"><a href="#">Кредит</a></li>
-            </ul>
+            <div> <!--этот див нужен для бэкгараундной половски по весь экран где расположен весь контент -->
+                <h2>Сервисы</h2>
+                <p>Хороший интернет-магазин отличается от плохого не только ценами! <br> Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+                <ul class="service-list">
+                    <li class="service-item">
+                        <a href="#">Доставка</a>
+                        <p>Доставка</p>
+                        <p>Мы с удовольствием доставим ваш товар прямо <br> к вашему подъезду совершенно бесплатно! <br> Ведь мы неплохо заработаем, <br> поднимая его на ваш этаж!</p>
+                        <img src="img/service-delivery.png" alt="delivery" width="426" height="227">
+                    </li>
+                    <li class="service-item"><a href="#">Гарантия</a></li>
+                    <li class="service-item"><a href="#">Кредит</a></li>
+                </ul>
+            </div>    
         </section>
         <div class="index-colums">
             <section class="info-company">
@@ -162,28 +175,30 @@
         </div>     
     </main>
     <footer class="main-footer">
-        <a class="logo footer-logo" href="index.html"><img src="img/technomart-logo.svg" alt="Логотип Техномарт" width="100" height="100"></a>
-        <ul class="footer-nav-list">
-            <li class="footer-nav-item"><a href="index.html">Компания</a></li>
-            <li class="footer-nav-item"><a href="index.html">Новости</a></li>
-            <li class="footer-nav-item"><a href="index.html">Каталог</a></li>
-            <li class="footer-nav-item"><a href="index.html">Доставка</a></li>
-            <li class="footer-nav-item"><a href="index.html">Контакты</a></li>
-        </ul>
-        <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br> <a class="contacts-phone" href="tel:+78125550555">+7 (812) 555-05-55</a></p>
-        <ul class="footer-offer-list">
-            <li class="footer-offer-item"><a href="index.html">Материалы</a></li>
-            <li class="footer-offer-item"><a href="index.html">Техника</a></li>
-            <li class="footer-offer-item"><a href="index.html">Инструмент</a></li>
-            <li class="footer-offer-item"><a href="index.html">Спецпредложения</a></li>
-        </ul>
-        <p>2010–2019 Компания «Техномарт» <br> Все права защищены &#169; <br></p> <!--добавить значок с-->
-        <ul class="footer-social">
-            <li><a class="social-button" href="index.html"><img src="img/vk-icon.svg" alt="Vk" width="40" height="40"></a></li>
-            <li><a class="social-button" href="index.html"><img src="img/facebook-icon.svg" alt="Facebook" width="40" height="40"></a></li>
-            <li><a class="social-button" href="index.html"><img src="img/insta-icon.svg" alt="Instagram" width="40" height="40"></a></li>
-        </ul>
-        <p>Обратная связь: <br> <a class="footer-feedback" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
+        <div> <!--этот див нужен для бэкгараундной половски по весь экран где расположен весь контент -->
+            <a class="logo footer-logo" href="index.html"><img src="img/technomart-logo.svg" alt="Логотип Техномарт" width="100" height="100"></a>
+            <ul class="footer-nav-list">
+                <li class="footer-nav-item"><a href="index.html">Компания</a></li>
+                <li class="footer-nav-item"><a href="index.html">Новости</a></li>
+                <li class="footer-nav-item"><a href="index.html">Каталог</a></li>
+                <li class="footer-nav-item"><a href="index.html">Доставка</a></li>
+                <li class="footer-nav-item"><a href="index.html">Контакты</a></li>
+            </ul>
+            <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br> <a class="contacts-phone" href="tel:+78125550555">+7 (812) 555-05-55</a></p>
+            <ul class="footer-offer-list">
+                <li class="footer-offer-item"><a href="index.html">Материалы</a></li>
+                <li class="footer-offer-item"><a href="index.html">Техника</a></li>
+                <li class="footer-offer-item"><a href="index.html">Инструмент</a></li>
+                <li class="footer-offer-item"><a href="index.html">Спецпредложения</a></li>
+            </ul>
+            <p>2010–2019 Компания «Техномарт» <br> Все права защищены &#169; <br></p> 
+            <ul class="footer-social">
+                <li><a class="social-button" href="index.html"><img src="img/vk-icon.svg" alt="Vk" width="40" height="40"></a></li>
+                <li><a class="social-button" href="index.html"><img src="img/facebook-icon.svg" alt="Facebook" width="40" height="40"></a></li>
+                <li><a class="social-button" href="index.html"><img src="img/insta-icon.svg" alt="Instagram" width="40" height="40"></a></li>
+            </ul>
+            <p>Обратная связь: <br> <a class="footer-feedback" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
+        </div>    
     </footer>
 </body>
 </html>
@@ -191,7 +206,6 @@
 <!-- 
 подключить нормалайз - закинуть в папку сss и фонс на всех страницах
 подключить стлили в линк
-закинуть цвета в кастомные свойства :root
 узнать горячую клавишу которая помогает весь код выравнить по правилу
 все стили в сss разбить на секции, чтобы понятно было, что где находится - быстро найти
 

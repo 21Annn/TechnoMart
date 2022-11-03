@@ -123,9 +123,11 @@ a {
     width: 50%;
     background-color: var(--basic-white);
 }
-.form-search::-moz-placeholder {
-   color: var(--basic-white);  /*  почему не красится текст */
-}
+.search-input::-webkit-input-placeholder { color: var(--basic-white); }
+.search-input:-ms-input-placeholder { color: var(--basic-white); }
+.search-input::-ms-input-placeholder { color: var(--basic-white); }
+.search-input::-moz-placeholder { color: var(--basic-white); }
+
 /* .search-icon {
     color: var(--bright-red);
 }
@@ -135,6 +137,7 @@ a {
 .search-icon:active {
     color: var(--bright-red);
 } */
+
 .search-input {
     font-size: 17px;
     padding: 0px;

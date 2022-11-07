@@ -62,6 +62,7 @@
     --deep-dark-blue: #293449;
     --basic-white: #ffffff;
     --basic-black: #000000;
+    --color-bez: #F9F5F0;
 
     --color-backrgoud: #f3f7f8;
 }
@@ -94,6 +95,15 @@ a {
 .hidden {
     visibility: hidden;
 }
+.button {
+    font-family: "Cuprum", sans-serif;
+    color: var(--basic-white);
+    padding: 10px 15px;
+    background-color: var(--bright-red);   
+}
+.button a {
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5); 
+}
 
 /* Navigation */
 
@@ -108,20 +118,45 @@ a {
 
 }
 .main-logo-wrapper {
-
+    padding: 0;
+    margin: 0;
 }
 .logo {
     padding: 10px 20px;
     background-color: var(--bright-red);
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
 }
+.wrapper-top-main {
+    display: grid;
+    padding: 0;
+    margin: 0;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: var(--deep-dark-blue);
+} в этом же классе настраиваем всю шапку навигации
 .form-search {
+    padding: 0;
+    margin: 0;
 
 }
 .form-search:active {
     height: 20%;
     width: 50%;
     background-color: var(--basic-white);
+}
+
+.search-input::before {
+        content: ""; 
+        float: left; 
+        position: relative; 
+        top: 4px; 
+        left: 45px;  
+        display: block; 
+        height: 25px; 
+        width: 25px; 
+        background: url(/img/icon-search1.svg) -3px -4px no-repeat;
+}
+input[type=search] {
+    color: #000000; поменять текст в поле ввода
 }
 .search-input::-webkit-input-placeholder { color: var(--basic-white); }
 .search-input:-ms-input-placeholder { color: var(--basic-white); }
@@ -137,9 +172,9 @@ a {
 .search-icon:active {
     color: var(--bright-red);
 } */
-
 .search-input {
     font-size: 17px;
+    width: 100px;
     padding: 0px;
     margin: 0px;
     border: none;
@@ -153,7 +188,7 @@ a {
 .order-info {
     font-family: "Cuprum", sans-serif;
     font-size: 14px;
-    background-color: var(--deep-dark-blue);
+    line-height: 12px;
     text-align: center;
     padding: 10px;
     list-style: none;
@@ -162,27 +197,54 @@ a {
     color: var(--basic-white);
 }
 .order-info .order-1 {
-    padding: 10px 10px;
-    background-image: url('../img/icon-bookmark.svg');
-    background-repeat: no-repeat;
+    
 }
 .order-info .order-2 {
-    padding: 10px 10px;
-    background-image: url('../img/icon-cart.svg');
-    background-repeat: no-repeat;
+   
 }
 .order-info .order-3 {
-    padding: 10px 10px;
-    background-color: var(--dark-green);
+
+}
+.button-bookmark::before {
+    content: "";
+    display: block;
+    position: relative;
+    float: left; 
+    top: 5px;
+    left: 170px;
+    width: 25px;
+    height: 25px;
+    background: url(/img/icon-bookmark.svg) -1px -1px no-repeat;
 }
 .button-bookmark {
+    margin: 0;
+}
+.button-bookmark:active {
 
+}
+.button-basket::before {
+    content: "";
+    display: block;
+    position: relative;
+    float: left; 
+    top: 5px;
+    left: 170px;
+    width: 25px;
+    height: 25px;
+    background: url(/img/icon-cart.svg) -1px -1px no-repeat;
 }
 .button-basket {
 
 }
 .button-checkout {
-
+    background-color: var(--dark-green);
+    padding: 10px 20px;
+}
+.button-checkout:hover {
+    background-color: #76c74a;
+}
+.button-checkout:active {
+    color: rgba(248, 246, 246, 0.5);
 }
 .header-info-shop-wrapper {
 
@@ -194,13 +256,24 @@ a {
     text-align: center;
     font-size: 14px;
 }
+.contacts-phone::before {
+    content: ""; 
+    float: left; 
+    position: relative; 
+    top: 4px; 
+    left: 45px;  
+    display: block; 
+    height: 25px; 
+    width: 25px; 
+    background: url(/img/icon-phone.svg) -1px -1px no-repeat;
+}
+
 .contacts-phone {
     font-family: "Cuprum", sans-serif;
     font-weight: 700;
     font-size: 14px;
     padding: 10px 40px;
     color: var(--bright-red);
-    background-image: url(/img/icon-phone.svg);
     border: 3px solid var(--basic-white);
     background-repeat: no-repeat;
 }
@@ -210,32 +283,52 @@ a {
     color: var(--deep-light-blue);
 }
 .login-link-wrapper {
-
+    display: grid;
 }
 .login-link {
-    display: block;
     font-family: "Cuprum", sans-serif;
     text-align: center;
-    font-size: 14px;
+    font-size: 21px;
+    line-height: 21px;
     list-style: none;
+    margin: 0;
+    padding-left: 0;
 }
 .login-link .login {
-    background-image: url('../img/icon-logout.svg');
-    background-repeat: no-repeat;
+
+}
+.button-login::before {
+    content: "";
+    display: block;
+    position: relative;
+    float: left; 
+    top: 3px;
+    left: 687px;
+    width: 25px;
+    height: 25px;
+    background: url(/img/icon-login.svg) -1px -1px no-repeat;
 }
 .button-login {
-    padding: 10px 30px;
     color: var(--deep-light-blue);
+    padding: 10px 30px;
     border: 1px solid var(--basic-white);
     background-color: var(--basic-white);
 }
 .button-login:hover {
     color: var(--bright-red);
 }
+.button-login:focus {
+    color: var(--bright-red);
+}
+.button-login:active {
+    color: #808080;
+}
+
 .login-link .registration {
     margin-top: 20px;
 }
 .button-registration {
+    font: inherit;
     color: var(--deep-dark-blue);
     border: 1px solid var(--basic-white);
     padding: 10px 30px;
@@ -245,25 +338,42 @@ a {
 }
 .button-registration:hover {
     color: var(--bright-red);
-} 
+}
+.button-registration:focus {
+    color: var(--bright-red);
+}
+.button-registration:active {
+    color: #808080;
+}
+
 .nav-site-wrapper {
     font-size: 14px;
     background-color: var(--deep-light-blue);
 }
 .nav-site-list {
+    margin: 0;
+    padding-left: 0;
     background-color: var(--deep-light-blue);
-
 }
 .nav-site-item {
-    
+    font-family: "Cuprum", sans-serif;
+    font-size: 22px;
+    line-height: 24px;
 }
 .nav-site-item a {
-    font-family: "Cuprum", sans-serif;
+    padding: 10px 20px;
     color: var(--basic-white);
 }
 .nav-site-item a:hover {
     background-color: var(--deep-dark-blue);
 }
+.nav-site-item a:focus {
+    background-color: var(--deep-dark-blue);
+}
+.nav-site-item a:active {
+    color: #808080;
+}
+
 /* Block Main */
 
 .container {
@@ -274,7 +384,6 @@ a {
 }
 .feature-list {
     border: 1px solid var(--basic-black);
-
 }
 .material {
     border: 1px solid transparent;
@@ -293,8 +402,6 @@ a {
     border: 1px solid transparent;
     color: var(--basic-white);
     background-color: rgba(255,255,255,.3);
- /* почему мы должны использовать цвета из root если там нельзя сделать прозначность и приходится испольо
-зовать rgba */
 } 
 .instrument {
     border: 1px solid transparent;
@@ -375,16 +482,145 @@ a {
     background-color: var(--deep-dark-blue);
     border: 2px solid var(--basic-white);
 }
-
-/* Button */
-
-.button {
-    font-family: "Cuprum", sans-serif;
+.header-gallery {
+    font-family: "Cuprum", serif;
+    font-size: 36px;
+    line-height: 24px;
+    font-weight: 700;
+    position: relative;
+    bottom: 230px;
+    left: 20px;
+    text-transform: uppercase;
     color: var(--basic-white);
-    padding: 10px 15px;
-    background-color: var(--bright-red);   
 }
-.button a {
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5); 
+.description {
+    font-family: "Cuprum", serif;
+    font-size: 14px;
+    line-height: 12px;
+    font-weight: 700;
+    position: relative;
+    bottom: 260px;
+    left: 20px;
+    text-transform: uppercase;
+    color: var(--basic-white);
+}
+.gallary-button-back {
+    border: 0;
+    text-decoration: none;
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -570px;
+    left: 55px;
+    width: 35px;
+    height: 45px;
+    z-index: 1;
+    background: url(/img/icon-left.png) 1px 1px no-repeat;
+}
+.gallary-button-next {
+    border: 0;
+    text-decoration: none;
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -570px;
+    right: 910px;
+    width: 35px;
+    height: 45px;
+    transform: rotate(180deg);
+    background: url(/img/icon-left.png) 1px 1px no-repeat;
+}
+.gallery-content1 {
+    position: relative;
+    z-index: -1;
+}
+.gallery-content2 {
+    position: relative;
+    bottom: 336px;
+    z-index: -1;
+}
+.button-gallery {
+    padding-left: 40px;
+    position: absolute;
+    bottom: 130px;
+    right: 800px;
+    width: 180px;
+    height: 25px;
+    z-index: 1;
 }
 
+/* Popular product */
+
+.wrapper-header {
+    background-color: var(--color-bez);
+}
+.header-popular {
+    text-transform: uppercase;
+}
+.button-popular {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.price-out {
+    color: #808080;
+    text-decoration: line-through;
+}
+.price {
+    color: var(--basic-white);
+    padding: 10px 20px;
+    background: url(/img/red-button.svg) 15px 1px no-repeat;
+}
+.brand-list {
+    display: block;
+    justify-content: space-between;
+}
+.brand-item {
+    display: block;
+    width: 220px;
+    height: 145px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.brand-item:hover {
+    box-shadow: 
+    0 2px 2px
+        rgba(0, 0, 0, 0.2),
+    0 0  0 2px 
+        rgba(255, 255, 255),
+    0.3em 0.3em 1em
+         rgba(0, 0, 0, 0.2);
+}
+.bosch {
+    padding-top: 50px;
+    padding-left: 30px;
+}
+.makita {
+    padding-top: 50px;
+    padding-left: 40px;
+}
+.dewalt {
+    padding-top: 50px;
+    padding-left: 40px;
+}
+.inter {
+    padding-top: 50px;
+    padding-left: 40px;
+}
+.hitachi {
+    padding-top: 50px;
+    padding-left: 40px;
+}
+.lg {
+    padding-top: 30px;
+    padding-left: 40px;
+}
+.aeg {
+    padding-top: 30px;
+    padding-left: 40px;
+}
+.metabo {
+    padding-top: 50px;
+    padding-left: 40px;
+}
+.wrapper-service {
+    background-color: var(--color-backrgoud);
+}

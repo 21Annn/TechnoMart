@@ -698,6 +698,23 @@ input[type=search] {
     padding-top: 50px;
     padding-left: 40px;
 }
+
+/* Service  */
+.service {
+
+}
 .wrapper-service {
     background-color: var(--color-backrgoud);
+}
+.header-service {
+    font-family: "Cuprum", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+    width: 120px;
+    margin-top: 20px;
+}
+.description-service {
+    font-family: "PT Sans", serif;
+    font-size: 12px;
 }

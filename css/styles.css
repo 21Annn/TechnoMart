@@ -628,7 +628,7 @@ input[type=search] {
 .button-popular {
     font-size: 18px;
     width: 200px;
-    margin: auto;  надо прижать к правому краю
+    margin: auto;  (надо прижать к правому краю)
     text-align: center;
     text-transform: uppercase;
 }
@@ -701,10 +701,13 @@ input[type=search] {
 
 /* Service  */
 .service {
-
+    background-color: var(--color-backrgoud);
+    width: 960px;
 }
 .wrapper-service {
-    background-color: var(--color-backrgoud);
+    display: grid;
+    grid-template-columns: 1fr  1fr 500px;
+
 }
 .header-service {
     font-family: "Cuprum", sans-serif;
@@ -713,8 +716,49 @@ input[type=search] {
     text-transform: uppercase;
     width: 120px;
     margin-top: 20px;
+    margin-left: 20px;
 }
 .description-service {
     font-family: "PT Sans", serif;
     font-size: 12px;
+    font-weight: 400;
+    width: 600px;
+    margin-left: 20px;
 }
+.service-list {
+    
+
+}
+.service-list ::after {
+    background: url(../img/services-shadow.png);
+}
+.service-delivery {
+    font-family: "Cuprum Bold", sans-serif;
+    text-decoration: none;
+    border: 1px solid transparent;
+    color: #293449;
+    background-color: var(--basic-white);
+    text-align: left;
+    width: 180px;
+    height: 50px;
+    padding-left: 15px;
+}
+.service-item {
+    font-family: "Cuprum Bold", sans-serif;
+    text-decoration: none;
+    border: 1px solid transparent;
+    color: #F9F5F0;
+    background-color: var(--deep-light-blue);
+    text-align: left;
+    width: 180px;
+    height: 50px;
+    padding-left: 15px;
+}
+.service-item:hover {
+    background-color: var(--deep-dark-blue);
+    cursor: pointer;
+}
+.service-info {
+    
+}
+

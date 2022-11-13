@@ -18,15 +18,14 @@
 </head>
 <body class="page-body">
     <header class="main-header">
-        <nav clas="top-main-nav">
+        <nav class="top-main-nav">
             <div class="top-main-nav-wrapper">  <!--этот див нужен для бэкгараундной половски по весь экран где расположен логотип -->
                 <div class="wrapper-top-main">
-                    <div class="main-logo-wrapper">
-                        <a href="index.html"><img class="logo" src="img/technomart-logo.svg" alt="Логотип Техномарт" width="108" height="18"></a> <!--попробовать оформить кнопку не через бордер а через outline-->
-                    </div>    
+
+                        <a class="main-logo-wrapper" href="index.html"><img class="logo" src="img/technomart-logo.svg" alt="Логотип Техномарт" width="108" height="18"></a> <!--попробовать оформить кнопку не через бордер а через outline-->
+
                     <form class="form-search" action="#" method="get">
-                        <label>
-                            <!-- <img class="search-icon" src="/img/icons-search.svg" width="17" height="17">  -->
+                        <label class="icon-search">
                             <input class="search-input" type="search" name="search" placeholder="Поиск">  
                         </label>
                     </form>
@@ -37,19 +36,21 @@
                             <li class="order-info order-3"><a class="order button-checkout" href="index.html">Оформить заказ</a></li>
                         </ul>
                 </div>    
-                    <div class="header-info-shop-wrapper"> <!--этот див нужен для бэкгараундной половски по весь экран где расположен весь контент -->
+                <div class="header-info-shop-wrapper"> <!--этот див нужен для бэкгараундной половски по весь экран где расположен весь контент -->
                         <p class="header-info-shop">Интернет-магазин <br> строительных материалов <br> и инструментов для ремонта <br></p>
-                        <a class="contacts-phone" href="tel:78125550555">+7 (812) 555 - 05 - 55</a>
-                        <p class="adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-                    <div class="login-link-wrapper">    
-                        <ul class="login-link">
-                            <li class="login-link login"><a class="button-login" href="index.html">Войти</a></li>
-                            <li class="login-link registration"><a class="button-registration" href="index.html">Регистрация</a></li> 
-                         </ul>
-                    </div>        
-                    </div>
+                        <p class="contacts"> 
+                            <a class="contacts-phone" href="tel:78125550555">+7 (812) 555 - 05 - 55</a>
+                            <span class="adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 </span>
+                        </p>
+                        <div class="login-link-wrapper">    
+                            <ul class="login-link">
+                                <li class="login-link login"><a class="button-login" href="index.html">Войти</a></li>
+                                <li class="login-link registration"><a class="button-registration" href="index.html">Регистрация</a></li> 
+                            </ul>
+                        </div>        
+                </div>
             
-                <div clas="nav-site-wrapper">        
+                <div class="nav-site-wrapper">        
                     <ul class="nav-site-list">
                         <li class="nav-site-item"><a href="index.html">Главная</a></li>
                         <li class="nav-site-item"><a href="index.html">Компания</a></li>

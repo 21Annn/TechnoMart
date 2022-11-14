@@ -75,12 +75,13 @@
                         <fieldset class="fieldset">
                             <legend class="legend-price">Цена:</legend>
                             <label>
-                                <input type="range"  min="0" max="300000" step="50000">
+                                <input class="range" type="range"  min="0" max="300000" step="50000">
                             </label>
-                            <label>     
-                                <input type="text" value="0"> -
-                                <input type="text" value="3000">
-                            </label>
+                            <div class="wrapper-filter-price">     
+                                <input class="price-filter" type="text" name="min-price" value="0"> 
+                                <span>-</span> 
+                                <input class="price-filter" type="text" name="max-price" value="30000">
+                            </div>
                         </fieldset>
                         <fieldset>
                             <legend>Производители:</legend>

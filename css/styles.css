@@ -1060,9 +1060,6 @@ input[type=search] {
     padding-top: 30px;
     padding-left: 35px;
 }
-.wrapper-filter-product {
-    display: flex;
-}
 .header-filter {
     font-family: "PT sans", "Arial", sans-serif;
     font-size: 14px;
@@ -1074,6 +1071,16 @@ input[type=search] {
     padding-top: 10px;
     padding-left: 20px;
 }
+.wrapper-filter-product {
+    display: flex;
+    justify-content: space-between;
+}
 .wrapper-filter {
     width: 200px;
+}
+.legend-price {
+
+}
+.fieldset {
+    border: 0;
 }

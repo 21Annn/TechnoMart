@@ -1079,7 +1079,10 @@ input[type=search] {
     width: 200px;
 }
 .fieldset {
+    margin: 0;
     border: 0;
+}
+.fieldset-1 {
     height: 150px;
     width: 200px;
 }
@@ -1092,6 +1095,7 @@ input[type=search] {
 
 }
 .range {
+    text-decoration: none; 
     background-color: #f7f3ec;
 
 }
@@ -1110,4 +1114,69 @@ input[type=search] {
     text-align: center;
     background-color: #f7f3ec;
     text-decoration: none;
+}
+.fieldset-2 {
+    margin: 0;
+    height: 200px;
+}
+.fieldset-manufacturers-supply {
+    font-family: "PT Sans Bold","Arial",sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+    margin: 0;
+    padding-top: 15px;
+    width: 200px;
+    border-top: 2px solid #f7f3ec;
+}
+.manufacturers {
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 0;
+}
+.manufacturers li {
+    margin-bottom: 15px;
+}
+.manufacturers label {
+    position: relative;
+}
+.manufacturers label:hover {
+    cursor: pointer;
+}
+.manufacturers label::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 23px;
+    height: 23px;
+    left: 0;
+    top: 0;
+    background: url(../img/checkbox-off.svg) 0 0 no-repeat; /*(менять иконку с помощью JS через toggle ?)*/
+}
+.manufacturers li:last-child {
+    margin-bottom: 0;
+}
+/* .input-manufacturers {
+    padding-right: 15px;
+} */
+.supply {
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 0;
+}
+.supply li {
+    margin-bottom: 15px;
+}
+.supply li:last-child {
+    margin-bottom: 0;
+}
+.button-show {
+    
+    border: 1px solid #000000;
 }

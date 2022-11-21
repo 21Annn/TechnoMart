@@ -112,7 +112,7 @@ a {
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5); 
 }
 .header {
-    font-family: "Cuprum", Arial, sans-serif;
+    font-family: "Cuprum", "Arial", sans-serif;
     font-size: 30px;
     font-weight: 400;
     text-transform: uppercase;
@@ -131,7 +131,8 @@ a {
 }
 
 .top-main-nav-wrapper {
-
+    width: 100%;
+    background-color: var(--deep-dark-blue);
 
 }
 .main-logo-wrapper {
@@ -150,7 +151,7 @@ a {
     justify-content: space-around;
     padding: 0;
     margin: 0;
-    background-color: var(--deep-dark-blue);
+    /* background-color: var(--deep-dark-blue); */
 
     /* border: 4px solid #3BBCE3; */
  } /* в этом же классе настраиваем всю шапку навигации */
@@ -189,6 +190,7 @@ input[type=search] {
 .search-input:-ms-input-placeholder { color: var(--basic-white); }
 .search-input::-ms-input-placeholder { color: var(--basic-white); }
 .search-input::-moz-placeholder { color: var(--basic-white); }
+
 .search-input {
     font-size: 17px;
     width: 100px;
@@ -449,7 +451,7 @@ input[type=search] {
     background-color: var(--deep-light-blue);
 }
 .nav-site-item {
-    font-family: "Cuprum", Arial, sans-serif;
+    font-family: "Cuprum", "Arial", sans-serif;
     font-size: 22px;
     line-height: 24px;
     margin: auto;
@@ -554,7 +556,7 @@ input[type=search] {
     position: relative;
     z-index: 2;
 }
-.background{
+.background {
     margin: 0;
     padding: 0;
     background-color: var(--deep-dark-blue);
@@ -562,7 +564,7 @@ input[type=search] {
     
 }
 .header-gallery {
-    font-family: "Cuprum", Arial, serif;
+    font-family: "Cuprum", "Arial", serif;
     font-size: 36px;
     line-height: 24px;
     font-weight: 700;
@@ -573,7 +575,7 @@ input[type=search] {
     color: var(--basic-white);
 }
 .description {
-    font-family: "Cuprum", Arial, serif;
+    font-family: "Cuprum", "Arial", serif;
     font-size: 14px;
     line-height: 12px;
     font-weight: 700;
@@ -705,7 +707,7 @@ input[type=search] {
 .button-popular {
     font-size: 18px;
     width: 200px;
-    margin: auto;  (надо прижать к правому краю)
+    margin: auto;  /* (надо прижать к правому краю) */
     text-align: center;
 }
 .product-list {
@@ -811,7 +813,7 @@ input[type=search] {
     background: url(../img/services-shadow.png) 4px 1px no-repeat; 
 }
 .service-delivery {
-    font-family: "Cuprum Bold", Arial, sans-serif;
+    font-family: "Cuprum Bold", "Arial", sans-serif;
     text-decoration: none;
     border: 1px solid transparent;
     color: #293449;
@@ -822,7 +824,7 @@ input[type=search] {
     padding-left: 15px;
 }
 .service-item {
-    font-family: "Cuprum Bold", Arial, sans-serif;
+    font-family: "Cuprum Bold", "Arial", sans-serif;
     text-decoration: none;
     border: 1px solid transparent;
     color: #F9F5F0;
@@ -849,7 +851,7 @@ input[type=search] {
     color: #293449;
 }
 .description-delivery {
-    font-family: "PT Sans", Times, serif;
+    font-family: "PT Sans", "Times", serif;
     font-size: 12px;                             
     font-weight: 400;
     text-align: start;
@@ -872,7 +874,7 @@ input[type=search] {
     grid-template-columns: 1fr 1fr;
  }
 .description-company {
-    font-family: "PT Sans", Times, serif;
+    font-family: "PT Sans", "Times", serif;
     font-size: 12px;
     font-weight: 400;
     color: #000000;
@@ -884,7 +886,7 @@ input[type=search] {
     margin-bottom: 0;
 }
 .delivery-list {
-    font-family: "Cuprum",Arial, sans-serif;
+    font-family: "Cuprum", "Arial", sans-serif;
     font-size: 18px;
     line-height: 24px;
     font-weight: 400;
@@ -910,7 +912,7 @@ input[type=search] {
     margin-left: 185px;
 }
 .description-contacts {
-    font-family: "PT Sans", Times, serif;
+    font-family: "PT Sans", "Times", serif;
     font-size: 12px;
     font-weight: 400;
     color: #000000;
@@ -1002,7 +1004,7 @@ input[type=search] {
     background-color: var(--deep-dark-blue);
 }
 .footer-info {
-    font-family: "Cuprum", Arial, sans-serif;
+    font-family: "Cuprum", "Arial", sans-serif;
     font-size: 16px;
     color: var(--basic-white);
     margin: 0;
@@ -1014,18 +1016,18 @@ input[type=search] {
     background-color: #EE3643;
 }
 .feedback {
-    font-family: "Cuprum", Arial, sans-serif;
+    font-family: "Cuprum", "Arial", sans-serif;
     font-size: 16px;
     color: var(--basic-white);
     margin-right: 20px;
 }
 .footer-feedback {
-    font-family: "Cuprum", Arial, sans-serif;
+    font-family: "Cuprum", "Arial", sans-serif;
     font-size: 16px;
     color: var(--yellow);
 }
                                                 /* проставить везде лайн-хеитс
-                                                стили каталога прописываются здесь же? по очереди или отдельно внизу
+                                                по очереди или отдельно внизу
                                                 проставить в фон феймили второй стиль взять в ковычки */
  /* Catalog */
 
@@ -1238,8 +1240,7 @@ input[type=search] {
     margin-left: 25px;
     border: 1px solid blue;
     width: 100px;
-    height: 20px;
-    
+    height: 20px; 
 }
 .sorting-list {
     display: flex;
@@ -1293,4 +1294,86 @@ input[type=search] {
 }
 .catalog-product-item li:nth-child(7n-9n) {
     margin-bottom: 0;
+}
+.number-page-list {
+    display: flex;
+    min-width: 200px;
+    min-height: 38px;
+    margin-top: 80px;
+    margin-bottom: 80px;  
+}
+.number-page-item {
+    font-family: "PT Sans","Arial",sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    text-transform: uppercase;
+    width: 38px;
+    height: 38px;
+    text-align: center;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    border: 1px solid #e5e5e5;
+    border-radius: 2px;
+    margin: 0;
+    margin-right: 20px;
+}                             /* увеличить область клика */
+.number-page-item a {
+    color: #000000;
+}
+.number-page-item:first-child {
+    color: var(--basic-white);
+    background-color: var(--bright-red);
+}
+.number-page-item:nth-child(4n) {
+    width: 138px;
+    height: 38px;
+    margin-right: 0;
+}
+.number-page-item:hover {
+        border: 1px solid #808080;
+        transition: color ease-in .4s;
+}
+.page-next a{
+    font-family: "PT Sans","Arial",sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #000000;
+}
+.wrap-about-perforator {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-backrgoud);
+    width: 100%;
+    height: 200px;
+    margin: 0;
+    border: 1px solid red;
+}                            /* расположить в центре */
+.header-about-perforator {
+    font-family: "Cuprum","Arial",sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 22px;
+    text-transform: uppercase;
+    width: 400px;
+    height: 38px;
+    color: #000000;
+    box-sizing: border-box;
+    margin: 0;
+}
+.text-about-perforator {
+    font-family: "PT Sans","Arial",sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+    min-width: 700px;
+    height: 100px;
+    color: #000000;
+    box-sizing: border-box;
+    margin: 0;
+}
+.footer-catalog {
+    margin-top: 0;
 }

@@ -74,7 +74,7 @@
     width: 100%;
 }
 .page-body {
-    width: 960px;
+    /* width: 100%; */ 
     margin: 0 auto;
     padding: 0;
     font-family: "Cuprum", Arial, sans-serif;
@@ -935,6 +935,7 @@ input[type=search] {
 
 .main-footer {
     width:  100%; /* не работает */
+    background-color: var(--deep-dark-blue);
 }
 .wrapper-footer {
     width: 960px;
@@ -1334,10 +1335,6 @@ input[type=search] {
     color: var(--basic-white);
     background-color: var(--bright-red);
 }
-/* .number-page-item:first-child:hover{
-    color: var(--basic-white);
-    background-color: red;
-} */
 .number-page-item:nth-child(4n) {
     width: 138px;
     height: 38px;
@@ -1394,4 +1391,13 @@ input[type=search] {
 }
 .footer-catalog {
     margin-top: 0;
-}
+}                                   /*  ДОБАВИТЬ в код новые обертки и отцентровать их. В оберках код центрирования 
+                                                with 960px, margin 0 auto , padding 0 10px
+                                                     Отредачить все размеры - добавить max-with в текстах 
+                                                        Выравнить все иконки, оставить для них место, прописать ширину для элемета/текста
+                                                        в карточках использовать маржины а не спейс-биитвин
+                                                        в див можно обернуть целую секцию
+                                                        у списков и загаловков обнулить маржин
+                                                        корзина оформить заказ можно сделать через инлайн-блок и указать маржин
+                                                        каждый лейбл и инпут обернут в тег p
+                                                        добавить гриды*/

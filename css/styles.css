@@ -136,7 +136,9 @@ a {
     margin: 0 auto;
     padding: 0;
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 .top-main-nav-wrapper {
     width: 100%;
@@ -152,7 +154,7 @@ a {
 .logo {
     padding: 10px 20px;
     background-color: var(--bright-red);
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 -5px 0 0 rgb(0 0 0 / 24%) inset;
 }
 .wrapper-top-main {
     display: flex;
@@ -299,17 +301,21 @@ input[type=search] {
 }
 .header-info-shop {
     font-family: "Cuprum Italic", Georgia, serif;
-    font-size: 14px;
+    font-size: 16px;
     color: var(--bright-red);
     align-items: flex-start;
 }
 .contacts {
     display: flex;
     flex-direction: column;
-    width: 300px;
+    width: 250px;
+    height: 100px;
     margin: 0;
     padding: 0;
-    border: 4px solid red;
+    margin-top: 40px;
+    margin-left: 95px;
+
+    /* border: 4px solid red; */
 }
 .contacts-phone::before {
     content: ""; 
@@ -339,47 +345,53 @@ input[type=search] {
     color: var(--deep-light-blue);
 }
 .login-link-wrapper {
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-    height: 200px;
+    box-sizing: border-box;
 
     /* border: 6px solid blue; */
 }
 .login-link {
     font-family: "Cuprum", Arial, sans-serif;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     font-size: 21px;
     line-height: 21px;
     list-style: none;
-    width: 600px;
-    height: 150px;
+    width: 400px;
+    height: 100px;
     margin: 0;
-    padding-left: 0;
-    /* display: flex; */
+    padding: 0;
 
 
-    border: 5px solid rgb(47, 127, 88);
+    /* border: 5px solid green; */
 }
 .login-link .login {
-
+    padding-right: 10px;
 }
 .button-login::before {
     content: "";
     display: block;
-    position: relative;
+    position: absolute;
     float: left; 
-    top: 3px;
-    left: 687px;
+    top: 15px;
+    left: 12px;
     width: 25px;
     height: 25px;
     background: url(/img/icon-login.svg) -1px -1px no-repeat;
 }
-.button-login {
-    color: var(--deep-light-blue);
-    padding: 10px 30px;
-    border: 1px solid var(--basic-white);
+.login a {
     background-color: var(--basic-white);
+    color: var(--deep-light-blue);
+    border: 1px solid var(--basic-white);
+    width: 111px;
+    height: 45px;
+}
+.button-login {
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    padding-top: 12px;
+    padding-left: 40px;
 }
 .button-login:hover {
     color: var(--bright-red);
@@ -392,7 +404,7 @@ input[type=search] {
 }
 
 .login-link .registration {
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 .button-registration {
     font: inherit;
@@ -558,7 +570,28 @@ input[type=search] {
 .feature-item a {
     display: flex;
 }
+.new::after {
+    content: "new";
+    font-family: "Cuprum","Arial",sans-serif;
+    color: var(--basic-white);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 4px;
+    position: absolute;
+    width: 100px;
+    height: 25px;
+    top: 10px;
+    right: -27px;
+    background-color: var(--bright-red);
+    transform: rotate(45deg);
+    overflow: hidden;
+}
 .material {
+    position: relative;
     width: 300px;
     height: 90px;
     padding-top: 20px;
@@ -571,11 +604,11 @@ input[type=search] {
 .material a {
     text-transform: uppercase;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 18px;
     border: 1px solid transparent;
     width: 90px;
-    padding-left: 5px;
+    padding: 10px 20px;
     margin-top: 10px;
     color: var(--basic-white);
     background-color: rgba(255,255,255,.3);
@@ -597,7 +630,7 @@ input[type=search] {
     line-height: 18px;
     border: 1px solid transparent;
     width: 90px;
-    padding-left: 5px;
+    padding: 10px 20px;
     margin-top: 10px;
     color: var(--basic-white);
     background-color: rgba(255,255,255,.3);
@@ -710,8 +743,8 @@ input[type=search] {
     font-size: 14px;
     line-height: 18px;
     border: 1px solid transparent;
-    width: 80px;
-    padding-left: 15px;
+    width: 77px;
+    padding: 10px 20px;
     margin-top: 10px;
     color: var(--basic-white);
     background-color: rgba(255,255,255,.3);
@@ -729,11 +762,11 @@ input[type=search] {
 .sale a {
     text-transform: uppercase;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 18px;
     border: 1px solid transparent;
     width: 90px;
-    padding-left: 10px;
+    padding: 10px 20px;
     margin-top: 10px;
     color: var(--basic-white);
     background-color: rgba(255,255,255,.3); 
@@ -753,8 +786,8 @@ input[type=search] {
     font-size: 14px;
     line-height: 18px;
     border: 1px solid transparent;
-    width: 80px;
-    padding-left: 15px;
+    width: 77px;
+    padding: 10px 10px;
     margin-top: 10px;
     color: var(--basic-white);
     background-color: rgba(255,255,255,.3);
@@ -767,29 +800,85 @@ input[type=search] {
     flex-direction: row;
     justify-content: space-between;
     background-color: var(--color-bez);
+    margin-bottom: 50px;
 }
 .header-popular {
     margin-left: 20px;
     text-transform: uppercase;
 }
 .button-popular {
-    font-size: 18px;
-    width: 200px;
-    margin: auto;  /* (надо прижать к правому краю) */
+    font-size: 16px;
+    margin-right: 20px; 
     text-align: center;
+}
+.button-popular:hover {
+    
 }
 .product-list {
     display: flex;
     justify-content: space-around;
+    box-sizing: border-box;
+    width: 960px;
+    height: 380px;
+    padding: 0;
+    margin: 0;
+}
+.product-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 17px;
+    line-height: 18px;
+    font-weight: 700;
+    width: 220px;
+    height: 318px;
+    box-sizing: border-box;
+    position: relative;
+    border: 1px solid rgba(45, 43, 43, 0.2);
+}
+.product-item:hover {
+    box-shadow: 
+    0 2px 2px
+        rgba(0, 0, 0, 0.2),
+    /* 0 0  0 2px 
+        rgba(255, 255, 255), */
+    0.3em 0.3em 1em
+        rgba(0, 0, 0, 0.2);
+}
+.img-wrap {
+    display: flex;
+    height: 170px;
+    text-align: center;
+    align-items: center;
+    box-sizing: border-box;
+    /* border: 4px solid red; */
+}
+.header-pop-product {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .price-out {
     color: #808080;
     text-decoration: line-through;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
 }
 .price {
+    padding: 10px 32px;
+    background: url(../img/price-button.svg) -24px 1px no-repeat;
+    margin-top: 0;
+    margin-bottom: 11px;
     color: var(--basic-white);
-    padding: 10px 20px;
-    background: url(/img/red-button.svg) 15px 1px no-repeat;
+    margin-left: 20px;
+    /* transform: translateX(6px); */
+}
+.price a {
+    font-size: 12px;
+    font-weight: 700;
 }
 .brand-list {
     display: flex;
@@ -807,8 +896,8 @@ input[type=search] {
     box-shadow: 
     0 2px 2px
         rgba(0, 0, 0, 0.2),
-    0 0  0 2px 
-        rgba(255, 255, 255),
+    /* 0 0  0 2px 
+        rgba(255, 255, 255), */
     0.3em 0.3em 1em
          rgba(0, 0, 0, 0.2);
 }
@@ -1001,17 +1090,26 @@ input[type=search] {
 /* Footer */
 
 .main-footer {
-    width:  100%; /* не работает */
-    background-color: var(--deep-dark-blue);
+    width:  100%;
+    background-color: var(--deep-light-blue);
 }
 .wrapper-footer {
     width: 960px;
+    margin: 0 auto;
     height: 140px;
     margin-top: 40px;
     background-color: var(--deep-light-blue);
 }
 .footer-logo {
-
+    display: block;
+    font-family: "Cuprum", Arial ,sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 24px;
+    text-align: center;
+    padding-top: 20px;
+    width: 220px;
+    height: 38px;
 }
 .footer-nav-list {
     display: flex;
@@ -1063,14 +1161,18 @@ input[type=search] {
     text-decoration: underline;
     color: var(--yellow);
 }
+.background-wrap-social {
+    background-color: var(--deep-dark-blue);
+}
 .wrapper-social {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0;
+    margin: 0 auto;
     width: 960px;
     height: 80px;
     background-color: var(--deep-dark-blue);
+    /* border: 4px solid red; */
 }
 .footer-info {
     font-family: "Cuprum", "Arial", sans-serif;
@@ -1229,7 +1331,7 @@ input[type=search] {
     height: 23px;
     left: 0;
     top: 0;
-    background: url(../img/checkbox-off.svg) 0 0 no-repeat; /*(менять иконку с помощью JS через toggle ?)*/
+    background: url(../img/checkbox-on.svg) 0 0 no-repeat; /*(менять иконку с помощью JS через toggle ?)*/
 }
 .manufacturers li:last-child {
     margin-bottom: 0;
@@ -1237,6 +1339,10 @@ input[type=search] {
 .input-manufacturers {
     margin-right: 25px;
     padding-left: 0;
+    visibility: hidden;
+}
+.input-manufacturers:focus {
+
 }
 .fieldset-3 {
     height: 100px;
@@ -1468,4 +1574,5 @@ input[type=search] {
                                                         корзина оформить заказ можно сделать через инлайн-блок и указать маржин
                                                         каждый лейбл и инпут обернут в тег p
                                                         добавить гриды
-                                                        добавить ариа-лейбл социанльным кнопкам с описанием сети*/
+                                                        добавить ариа-лейбл социанльным кнопкам с описанием соц сети и кнопкам которые добавляют товар в корзниу
+                                                        добавить везде состояние фокус*/

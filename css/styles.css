@@ -279,6 +279,7 @@ input::-webkit-search-results-decoration { display: none; }
 }
 .icon-bookmark {
     fill-opacity: 0.25;
+    cursor: pointer;
 }
 .icon-bookmark:hover {
     fill-opacity: 1;
@@ -296,6 +297,7 @@ input::-webkit-search-results-decoration { display: none; }
 }
 .icon-basket:hover {
     fill-opacity: 1;
+    cursor: pointer;
 }
 .order-info .order-3 {
     height: 50px;
@@ -333,8 +335,6 @@ input::-webkit-search-results-decoration { display: none; }
     margin: 0;
     width: 100%;
     height: 200px;
- 
-    /* border: 4px solid red; */
 }
 .header-info-shop {
     font-family: "Cuprum Italic", Georgia, serif;
@@ -364,14 +364,16 @@ input::-webkit-search-results-decoration { display: none; }
     width: 30px;
     background: url(/img/icon-phone.svg) -1px -1px no-repeat;
 }
-
 .contacts-phone {
+    display: block;
     font-family: "Cuprum", Arial, sans-serif;
     font-weight: 700;
     font-size: 22px;
     line-height: 18px;
-    width: 245px;
-    height: 45px;
+    text-align: center;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
     color: var(--bright-red);
     border: 3px solid var(--basic-white);
     background-repeat: no-repeat;
@@ -380,6 +382,7 @@ input::-webkit-search-results-decoration { display: none; }
     font-family: "Cuprum", sans-serif;
     font-size: 14px;
     color: var(--deep-light-blue);
+    padding-top: 10px;
 }
 .login-link-wrapper {
     box-sizing: border-box;
@@ -405,7 +408,7 @@ input::-webkit-search-results-decoration { display: none; }
 .login-link .login {
     padding-right: 10px;
 }
-.button-login::before {
+/* .button-login::before {
     content: "";
     display: block;
     position: absolute;
@@ -415,7 +418,7 @@ input::-webkit-search-results-decoration { display: none; }
     width: 25px;
     height: 25px;
     background: url(/img/icon-login.svg) -1px -1px no-repeat;
-}
+} */
 .login a {
     background-color: var(--basic-white);
     color: var(--deep-light-blue);
@@ -424,11 +427,13 @@ input::-webkit-search-results-decoration { display: none; }
     height: 45px;
 }
 .button-login {
-    display: block;
-    position: relative;
-    box-sizing: border-box;
-    padding-top: 12px;
-    padding-left: 40px;
+    text-align: center;
+    padding: 10px 20px;
+
+    /* установить область клика у ховер у всех иконок в шапке */
+}
+.icon-login:hover {
+    fill: #293449;
 }
 .button-login:hover {
     color: var(--bright-red);
@@ -445,10 +450,8 @@ input::-webkit-search-results-decoration { display: none; }
 }
 .button-registration {
     font: inherit;
-    color: var(--deep-dark-blue);
-    border: 1px solid var(--basic-white);
     padding: 10px 30px;
-    color: var(--deep-light-blue);
+    color: var(--deep-dark-blue);
     border: 1px solid var(--basic-white);
     background-color: var(--basic-white);
 }
@@ -560,11 +563,13 @@ input::-webkit-search-results-decoration { display: none; }
 /* Feature */
 
 .container {
-    width: 960px;
     margin: 0 auto;
     padding: 0;
 }
 .feature {
+    width: 960px;
+    margin: 0 auto;
+    padding: 0;
     display: flex; 
 }
 .feature-box {
@@ -608,8 +613,17 @@ input::-webkit-search-results-decoration { display: none; }
 
     /* border: 4px solid yellow; */
 }
+.feature-item {
+
+    padding: 10px 10px;
+    
+    border: 2px solid red;
+    /* почему не реагирует класс  feature-item  на элемент  */
+}
 .feature-item a {
     display: flex;
+
+    /* border: 20px solid red;  */
 }
 .new::after {
     content: "new";
@@ -629,6 +643,11 @@ input::-webkit-search-results-decoration { display: none; }
     right: -27px;
     background-color: var(--bright-red);
     transform: rotate(45deg);
+}
+.icon-material {
+    margin-left: 55px;
+
+    border: 2px solid red;
 }
 .material {
     position: relative;
@@ -836,6 +855,11 @@ input::-webkit-search-results-decoration { display: none; }
 
 /* Popular product */
 
+.popular-product {
+    width: 960px;
+    margin: 0 auto;
+    padding: 0;
+}
 .wrapper-header {
     display: flex;
     flex-direction: row;
@@ -922,6 +946,11 @@ input::-webkit-search-results-decoration { display: none; }
     font-size: 12px;
     font-weight: 700;
 }
+.popular-brand {
+    width: 960px;
+    margin: 0 auto;
+    padding: 0;
+}
 .brand-list {
     display: flex;
     flex-wrap: wrap;
@@ -983,11 +1012,15 @@ input::-webkit-search-results-decoration { display: none; }
     height: 500px;
     position: relative;
     background-color: var(--color-backrgoud);
+
+    /* border: 2px solid red; */
 }
 .wrap-service {
     width: 960px;
     margin: 0 auto;
-    /* padding: 0 10px; */
+    padding: 0;
+
+    /* border: 2px solid black; */
 }
 .description-service {
     font-family: "PT Sans", Times, serif;
@@ -1010,8 +1043,8 @@ input::-webkit-search-results-decoration { display: none; }
     content: "";
     position: absolute;
     display: block;
-    top: 150px;                                                 
-    left: 211px;
+    top: 149px;                                                 
+    left: 441px;
     width: 10px;
     height: 200px;
     background: url(../img/services-shadow.png) 4px 1px no-repeat; 
@@ -1065,7 +1098,7 @@ input::-webkit-search-results-decoration { display: none; }
     position: absolute;
     display: block;
     top: 150px; 
-    left: 460px;
+    left: 693px;
     width: 500px;
     height: 300px;
     background: url(../img/service-delivery.png) 30px 30px no-repeat;
@@ -1074,6 +1107,9 @@ input::-webkit-search-results-decoration { display: none; }
  /* Info-company */
 
  .info-company-contacts {
+    width: 960px;
+    margin: 0 auto;
+    padding: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
  }

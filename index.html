@@ -9,7 +9,6 @@
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
     <!-- <link rel="apple-touch-icon" href=""> где брать эту ссылку-->
     <!-- <link rel="manifest" href="manifest.webmanifest"> -->
-    <!--мы прописали манифескт, но по факту этих картинок нет, их брать в тз из фигмы? и подготавливать в формате ico-->
     <!-- <link rel="stylesheet" href="fonts"> -->
     <link rel="stylesheet" href="css/normalize.css">  <!--подключить их правильно--> 
     <link rel="stylesheet" href="css/styles.css">
@@ -17,25 +16,24 @@
 <body class="page-body">
     <header class="main-header">
         <nav class="top-main-nav">
-            <div class="top-main-nav-wrapper">  <!--этот див нужен для бэкгараундной половски по весь экран где расположен логотип -->
+            <div class="top-main-nav-wrapper"> 
                 <div class="content-size-one">
                     <div class="wrapper-top-main">
                         <div class="main-logo-wrapper">
-                            <a href="index.html"><img class="logo-top" src="img/technomart-logo.svg" alt="Логотип Техномарт" width="108" height="45"></a>
-                             <!-- попробовать оформить кнопку не через бордер а через outline -->
-                        </div>    
-                        <form class="form-search" action="#" method="get">
-            
+                            <a href="index.html"><img class="logo-top" src="img/technomart-logo.svg" alt="Логотип Техномарт" width="108" height="45"></a>                         
+                        </div>
+
+                        <form class="form-search" action="#" method="get">          
                             <label class="label-search">
                                 <a href="#" class="icon-search">
                                     <svg  width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M18.1585 17.05L14.448 13.35C15.4508 12.05 16.1528 10.35 16.1528 8.44995C16.1528 4.04995 12.5426 0.449951 8.13013 0.449951C3.71764 0.449951 0.107422 4.14995 0.107422 8.54995C0.107422 12.95 3.71764 16.55 8.13013 16.55C9.93524 16.55 11.6401 15.95 13.044 14.85L16.7545 18.55L18.1585 17.05ZM8.13013 14.55C4.82076 14.55 2.1131 11.85 2.1131 8.54995C2.1131 5.24995 4.82076 2.54995 8.13013 2.54995C11.4395 2.54995 14.1472 5.24995 14.1472 8.54995C14.1472 11.85 11.4395 14.55 8.13013 14.55Z" fill="grey"/>
                                     </svg>
-                                </a>
-                                <!-- можно ли svg оборачивать в ссылку, чтобы было состояние fover -->
+                                </a>                                
                                 <input class="search-input" type="search" name="search" placeholder="Поиск">  
                             </label>
-                        </form>                   
+                        </form>
+
                         <ul class="order-info">
                             <li class="order-info order-1">
                                 <svg class="icon-bookmark" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -51,34 +49,36 @@
                                 </svg>
                                 <a class="order button-basket" href="index.html">Корзина: 0</a>
                             </li>
-                            <li class="order-info order-3"><a class="order button-checkout" href="index.html">Оформить заказ</a></li>
+                            <li class="order-info order-3">
+                                <a class="order button-checkout" href="index.html">Оформить заказ</a>
+                            </li>
                         </ul>       
                     </div>
                 </div>
             </div>        
-                    <div class="header-info-shop-wrapper"> <!--этот див нужен для бэкгараундной половски по весь экран где расположен весь контент -->
-                        <div class="content-size-two">    
-                            <p class="header-info-shop">Интернет-магазин <br> строительных материалов <br> и инструментов для ремонта <br></p>
-                            <p class="contacts"> 
-                                <a class="contacts-phone" href="tel:78125550555">+7 (812) 555 - 05 - 55</a>
-                                <span class="adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 </span>
-                            </p>
-                            <!-- <div class="login-link-wrapper">     -->
-                                <ul class="login-link">
-                                    <li class="login">
-                                        <a class="button-login" href="index.html">
-                                            <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="icon-login" d="M14.1667 8.5L5.71429 0V6H0V11H5.71429V17L14.1667 8.5Z" fill="#C5C5C5"/>
-                                                <path class="icon-login" d="M16.177 15.01H11.3894V17H16.177C18.2513 17 19.038 15.19 19.0618 13.974V3.028C19.038 1.811 18.2513 0 16.177 0H11.3894V1.99H16.177C16.9761 1.99 17.1218 2.671 17.1389 3.047V13.951C17.1227 14.327 16.9761 15.01 16.177 15.01Z" fill="#C5C5C5"/>
-                                            </svg>
-                                            Войти
-                                        </a>
-                                    </li>
-                                    <li class="registration"><a class="button-registration" href="index.html">Регистрация</a></li> 
-                                </ul>
-                            <!-- </div>  -->
-                        </div>           
-                    </div>
+            <div class="header-info-shop-wrapper"> <!--этот див нужен для бэкгараундной половски по весь экран где расположен весь контент -->
+                <div class="content-size-two">    
+                    <p class="header-info-shop">Интернет-магазин <br> строительных материалов <br> и инструментов для ремонта <br></p>
+                    <p class="contacts"> 
+                        <a class="contacts-phone" href="tel:78125550555">+7 (812) 555 - 05 - 55</a>
+                        <span class="adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 </span>
+                    </p>
+                    <!-- <div class="login-link-wrapper">     -->
+                        <ul class="login-link">
+                            <li class="login">
+                                <a class="button-login" href="index.html">
+                                    <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="icon-login" d="M14.1667 8.5L5.71429 0V6H0V11H5.71429V17L14.1667 8.5Z" fill="#C5C5C5"/>
+                                        <path class="icon-login" d="M16.177 15.01H11.3894V17H16.177C18.2513 17 19.038 15.19 19.0618 13.974V3.028C19.038 1.811 18.2513 0 16.177 0H11.3894V1.99H16.177C16.9761 1.99 17.1218 2.671 17.1389 3.047V13.951C17.1227 14.327 16.9761 15.01 16.177 15.01Z" fill="#C5C5C5"/>
+                                    </svg>
+                                    Войти
+                                </a>
+                            </li>
+                            <li class="registration"><a class="button-registration" href="index.html">Регистрация</a></li> 
+                        </ul>
+                    <!-- </div>  -->
+                </div>           
+            </div>
                 
                     <div class="nav-site-wrapper">        
                             <ul class="nav-site-list">

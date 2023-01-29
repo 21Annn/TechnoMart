@@ -258,11 +258,9 @@ input::-webkit-search-results-decoration { display: none; }
     font-family: "Cuprum", Arial, sans-serif;
     font-size: 18px;
     line-height: 24px;
-    text-align: center;
     list-style: none;
     padding: 0;
     margin: 0;
-
 
     /* border: 5px solid red; */
 }
@@ -305,24 +303,6 @@ input::-webkit-search-results-decoration { display: none; }
     padding: 0 20px;
     background-color: var(--dark-green);
 }
-/* .button-bookmark::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 6px;
-    left: -5px;
-    width: 25px;
-    height: 25px;
-    background: url(/img/icon-bookmark.svg) -1px -1px no-repeat;
-} */
-/* .button-bookmark {
-    position: relative;
-    margin: 0;
-    width: 100px;
-    height: 30px;
-    padding: 0;
-    padding-left: 10px;
-} Можно делать так иконки - оставить как пример */
 .order-3:hover {
     background-color: #76c74a;
 }
@@ -465,62 +445,68 @@ input::-webkit-search-results-decoration { display: none; }
     color: #808080;
 }
 
-
-
-.login-link-catalog {
+.login-link-wrapper {
     display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+
+    /* border: 2px solid rgb(195, 255, 0); */
 }
 .login-user {
-    margin: 0;
-    position: absolute;
-}
-.login-user a::after {
-    content: "";
-    position: relative;
     display: block;
+    /* width: 210px;
+    height: 40px; */
     margin: 0;
-    float: left;
-    top: -8px;
-    right: 40px;
-    width: 35px;
-    height: 45px;
-    background: url(../img/icon-user.svg) 1px 1px no-repeat;
+    padding: 0;
+    margin-top: 20px;
+    margin-left: 95px;
+
+    /* border: 2px solid rgb(195, 255, 0); */
 }
 .login-user a {
     display: block;
     align-items: center;
     text-align: center;
     margin: 0;
-    height: 40px;
+    height: 35px;
     width: 300px;
     padding-top: 15px;
     color: var(--basic-black);
     background-color: var(--basic-white);
 }
-.login-user a::before {
-    content: "";
-    position: relative;
-    display: block;
+.login-link-catalog {
+    display: flex;
     margin: 0;
-    float: left;
-    top: -8px;
-    left: 280px;
-    width: 35px;
-    height: 45px;
-    background: url(../img/icon-logout.svg) 1px 1px no-repeat;
+    margin-left: 90px;
+    margin-top: 10px;
 }
 .bread-crumbs-catalog {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     width: 120px;
+    margin: 0;
+    padding: 0;
+
+    /* border: 2px solid red; */
 }
 .bread-crumbs-catalog a {
-    font-size: 16px;
+    font-family: inherit;
+    font-size: 18px;
     color: #293449;
 }
-
-
+.bread-crumbs-catalog a:hover {
+    color: #EE3643;
+}
+.button-basket-catalog {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0 15px;
+    width: 200px;
+    height: 50px;
+    background-color: var(--bright-red);
+}
 
 .nav-site-wrapper {
     width: 960px;
@@ -1252,7 +1238,7 @@ input::-webkit-search-results-decoration { display: none; }
     flex-direction: row; 
     align-items: flex-end;
     width: 960px;
-    margin: 0 0;
+    margin: 0;
     padding-bottom: 0;
 
 
@@ -1375,7 +1361,10 @@ input::-webkit-search-results-decoration { display: none; }
                                                 по очереди или отдельно внизу
                                                 проставить в фон феймили второй стиль взять в ковычки */
  /* Catalog */
-
+.wrap-bread-crumbs {
+    max-width: 960px;
+    margin: 0 auto;
+}
  .bread-crumbs-catalog2 {
     display: flex;
     justify-content: space-between;
@@ -1399,8 +1388,15 @@ input::-webkit-search-results-decoration { display: none; }
     background: url(../img/icon-home.svg) 3px 3px no-repeat;
  }
  .catalog-perforator {
-
+    max-width: 960px;
+    margin: 0 auto;
  }
+ .wrapper-footer-catalog {
+    width: 960px;
+    margin: 0 auto;
+    height: 140px;
+    background-color: var(--deep-light-blue);
+}
 .header-catalog {
     font-family: "Cuprum", "Arial", sans-serif;
     font-size: 28px;
@@ -1417,19 +1413,30 @@ input::-webkit-search-results-decoration { display: none; }
     font-size: 14px;
     font-weight: 400;
     text-transform: uppercase;
-    background-color: #f7f3ec;
-    height: 30px;
     width: 180px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
     padding-top: 10px;
     padding-left: 20px;
+    background-color: #f7f3ec;
 }
 .wrapper-filter-product {
     display: flex;
+    margin: 0;
+    padding: 0;
     margin-right: 10px;
+
+    /* border: 12px solid sienna; */
 }
 .wrapper-filter {
     width: 200px;
+    margin: 0;
+    padding: 0;
     margin-right: 35px;
+
+    /* border: 12px solid rgb(45, 91, 160); */
 }
 .fieldset {
     margin: 0;
@@ -1486,6 +1493,7 @@ input::-webkit-search-results-decoration { display: none; }
     padding: 0;
     margin: 0;
     text-align: left;
+
     border: 1px solid red;
 }
 .manufacturers li {
@@ -1570,7 +1578,9 @@ input::-webkit-search-results-decoration { display: none; }
     min-height: 1090px;
     margin: 0;
     padding: 0;
-    border: 5px solid blueviolet;
+
+
+    /* border: 5px solid blueviolet; */
 }
 .wrap-sorting {
     display: flex;
@@ -1703,7 +1713,7 @@ input::-webkit-search-results-decoration { display: none; }
     text-transform: uppercase;
     color: #000000;
 }
-.wrap-about-perforator {
+.about-perforator {
     display: flex;
     flex-direction: column;
     background-color: var(--color-backrgoud);
@@ -1711,8 +1721,14 @@ input::-webkit-search-results-decoration { display: none; }
     width: 100%;
     height: 200px;
     margin: 0;
-    border: 1px solid red;
-}                            /* расположить в центре */
+    padding: 0;
+    padding-top: 70px;
+    /* border: 1px solid red; */
+}                            
+.wrap-about-perforator {
+    max-width: 960px;
+    margin: 0 auto;
+}
 .header-about-perforator {
     font-family: "Cuprum","Arial",sans-serif;
     font-weight: 700;

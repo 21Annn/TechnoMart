@@ -388,17 +388,6 @@ input::-webkit-search-results-decoration { display: none; }
 .login-link .login {
     padding-right: 10px;
 }
-/* .button-login::before {
-    content: "";
-    display: block;
-    position: absolute;
-    float: left; 
-    top: 15px;
-    left: 12px;
-    width: 25px;
-    height: 25px;
-    background: url(/img/icon-login.svg) -1px -1px no-repeat;
-} */
 .login a {
     background-color: var(--basic-white);
     color: var(--deep-light-blue);
@@ -565,6 +554,7 @@ input::-webkit-search-results-decoration { display: none; }
     height: 400px;
     margin-top: 50px;
     margin-bottom: 50px;
+
     /* border: 4px solid red; */
 }
 .feature-list1 {
@@ -581,7 +571,6 @@ input::-webkit-search-results-decoration { display: none; }
     width: 300px;
     height: 410px;
     margin-top: 50px;
-
 
     /* border: 4px solid black; */
 }
@@ -704,7 +693,6 @@ input::-webkit-search-results-decoration { display: none; }
 
 }
 .background {
-    /* position: relative; */
     max-width: 620px;
     max-height: 260px;
     margin: 0;
@@ -740,6 +728,7 @@ input::-webkit-search-results-decoration { display: none; }
     border: 0;
     text-decoration: none;
     background: url(/img/icon-left.png) 1px 1px no-repeat;
+
     /* background-color: #000000; */
 }
 .header-gallery {
@@ -939,13 +928,14 @@ input::-webkit-search-results-decoration { display: none; }
     box-shadow: 
     0 2px 2px
         rgba(0, 0, 0, 0.2),
-    /* 0 0  0 2px 
-        rgba(255, 255, 255), */
     0.3em 0.3em 1em
         rgba(0, 0, 0, 0.2);
 }
 .img-wrap {
     display: flex;
+    margin: 0;
+    padding: 0;
+    width: 200px;
     height: 170px;
     text-align: center;
     align-items: center;
@@ -1002,41 +992,15 @@ input::-webkit-search-results-decoration { display: none; }
     box-shadow: 
     0 2px 2px
         rgba(0, 0, 0, 0.2),
-    /* 0 0  0 2px 
-        rgba(255, 255, 255), */
     0.3em 0.3em 1em
          rgba(0, 0, 0, 0.2);
 }
-.bosch {
+.brand-item-name {
     padding-top: 50px;
     padding-left: 30px;
 }
-.makita {
-    padding-top: 50px;
-    padding-left: 40px;
-}
-.dewalt {
-    padding-top: 50px;
-    padding-left: 40px;
-}
-.inter {
-    padding-top: 50px;
-    padding-left: 40px;
-}
-.hitachi {
-    padding-top: 50px;
-    padding-left: 40px;
-}
-.lg {
+.brand-item-name2 {
     padding-top: 30px;
-    padding-left: 40px;
-}
-.aeg {
-    padding-top: 30px;
-    padding-left: 40px;
-}
-.metabo {
-    padding-top: 50px;
     padding-left: 40px;
 }
 
@@ -1280,14 +1244,12 @@ input::-webkit-search-results-decoration { display: none; }
     width: 960px;
     margin: 0;
     margin-top: 20px;
-    /* background-color: red; */
 }
 .adress-footer {
     font-size: 18px;
     color: var(--basic-white);
     margin: 0;
     width: 350px;
-    /* background-color: red; */
 }
 .footer-contacts-phone {
     display: block;
@@ -1295,7 +1257,6 @@ input::-webkit-search-results-decoration { display: none; }
     color: var(--basic-white);
     margin: 0;
     width: 200px;
-    /* background-color: red; */
 }
 .footer-offer-list {
     display: flex;
@@ -1305,7 +1266,6 @@ input::-webkit-search-results-decoration { display: none; }
     margin-top: 0;
     margin-left: auto;
     margin-bottom: 0;
-    /* background-color: red; */
 }
 .footer-offer-item a {
     font-size: 18px;
@@ -1326,6 +1286,7 @@ input::-webkit-search-results-decoration { display: none; }
     width: 960px;
     height: 80px;
     background-color: var(--deep-dark-blue);
+
     /* border: 4px solid red; */
 }
 .footer-info {
@@ -1361,6 +1322,7 @@ input::-webkit-search-results-decoration { display: none; }
                                                 по очереди или отдельно внизу
                                                 проставить в фон феймили второй стиль взять в ковычки */
  /* Catalog */
+
 .wrap-bread-crumbs {
     max-width: 960px;
     margin: 0 auto;
@@ -1455,8 +1417,8 @@ input::-webkit-search-results-decoration { display: none; }
     font-size: 18px;
     line-height: 30px;
     text-transform: uppercase;
-    /* margin-bottom: 20px; */
 
+    /* margin-bottom: 20px; */
 }
 .background-range {
     display: block;
@@ -1495,7 +1457,7 @@ input::-webkit-search-results-decoration { display: none; }
     margin: 0;
     text-align: left;
 
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 .manufacturers li {
     margin-bottom: 15px;
@@ -1637,10 +1599,6 @@ input::-webkit-search-results-decoration { display: none; }
     fill: #000000;
     opacity: 1;
 } 
-/* .sorting-item:not(:first-child):hover {
-    color: #000000;
-    cursor: pointer;  
-} */
 .sorting-color {
     color: red;
 }
@@ -1648,31 +1606,36 @@ input::-webkit-search-results-decoration { display: none; }
     color: red; 
 } 
 .catalog-product-list {
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 0;
-    margin: 0;
     justify-content: center;
-    border: 1px solid red;
+
+    /* border: 1px solid red; */
 }
 .catalog-product-list li {
     margin-bottom: 15px;
     margin-right: 15px;
 }
-/* .catalog-product-list li:nth-child(7n-9n) {
-    margin-bottom: 0;
-}  */
 .catalog-product-item {
-    width: 200px;
-    min-height: 150px;
     margin: 0;
     padding: 0;
-    margin-right: 15px;
-    margin-bottom: 25px;
-    outline: 1px solid #e5e5e5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 17px;
+    line-height: 18px;
+    font-weight: 700;
+    width: 220px;
+    min-height: 318px;
+    box-sizing: border-box;
+    position: relative;
+    border: 1px solid rgba(45, 43, 43, 0.2);
+    overflow: hidden;
 
-    /* border: 2px solid red; */
+    /* outline: 1px solid #e5e5e5; */
 }
 .catalog-product-item:nth-child(3n) {
     margin-right: 0;
@@ -1680,35 +1643,18 @@ input::-webkit-search-results-decoration { display: none; }
 .catalog-product-item li:nth-child(7n-9n) {
     margin-bottom: 0;
 }
-.catalog-product-item-new {
-    position: relative;
-    width: 200px;
-    min-height: 150px;
-    margin-right: 15px;
-    margin-bottom: 25px;
-    outline: 1px solid #e5e5e5;
+.catalog-product-item:hover {
+    box-shadow: 
+    0 2px 2px
+        rgba(0, 0, 0, 0.2),
+    0.3em 0.3em 1em
+        rgba(0, 0, 0, 0.2);
+} 
+.catalog-product {
+    /* width: 150px;
+    height: 150px;
     margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-.catalog-product-item-new::after {
-    content: "new";
-    font-family: "Cuprum","Arial",sans-serif;
-    color: var(--basic-white);
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 18px;
-    text-transform: uppercase;
-    text-align: center;
-    box-sizing: border-box;
-    padding-top: 4px;
-    position: absolute;
-    width: 100px;
-    height: 25px;
-    top: 10px;
-    right: -27px;
-    background-color: var(--bright-red);
-    transform: rotate(45deg);
+    padding: 0; */
 }
 .wrap-product {
     margin-bottom: 7px;
@@ -1717,31 +1663,32 @@ input::-webkit-search-results-decoration { display: none; }
     text-transform: none;
     text-align: center;
     margin-top: 10px;
-/* центрировать блок */
-
+}
+.wrap-page-list {
+    margin-left: 210px;
 }
 .number-page-list {
     display: flex;
     min-width: 200px;
     min-height: 38px;
-    margin-top: 80px;
+    margin-top: 30px;
     margin-bottom: 80px;  
 }
 .number-page-item {
+    width: 38px;
+    height: 38px;
+    margin: 0;
+    margin-right: 20px;
+    padding: 10px 15px;
     font-family: "PT Sans","Arial",sans-serif;
     font-weight: 400;
     font-size: 15px;
     line-height: 18px;
     text-transform: uppercase;
-    width: 38px;
-    height: 38px;
     text-align: center;
-    padding: 10px 15px;
     box-sizing: border-box;
     border: 1px solid #e5e5e5;
     border-radius: 2px;
-    margin: 0;
-    margin-right: 20px;
 }                             /* увеличить область клика */
 .number-page-item a {
     color: #000000;
@@ -1759,11 +1706,7 @@ input::-webkit-search-results-decoration { display: none; }
         border: 1px solid #808080;
         transition: color ease-in .4s;
 }
-.number-page-item:hover:nth-child(1) {
-    border: 1px solid #2516c9;
-    transition: color ease-in .4s;
-}
-.page-next a{
+.page-next a {
     font-family: "PT Sans","Arial",sans-serif;
     font-weight: 400;
     font-size: 15px;
@@ -1775,12 +1718,12 @@ input::-webkit-search-results-decoration { display: none; }
     display: flex;
     flex-direction: column;
     background-color: var(--color-backrgoud);
-
     width: 100%;
     height: 200px;
     margin: 0;
     padding: 0;
     padding-top: 70px;
+
     /* border: 1px solid red; */
 }                            
 .wrap-about-perforator {
@@ -1800,6 +1743,8 @@ input::-webkit-search-results-decoration { display: none; }
     margin: 0;
 }
 .text-about-perforator {
+    margin: 0;
+    padding: 0;
     font-family: "PT Sans","Arial",sans-serif;
     font-weight: 400;
     font-size: 13px;
@@ -1808,18 +1753,18 @@ input::-webkit-search-results-decoration { display: none; }
     height: 100px;
     color: #000000;
     box-sizing: border-box;
-    margin: 0;
 }
 .footer-catalog {
     margin-top: 0;
-}                                   /*  ДОБАВИТЬ в код новые обертки и отцентровать их. В оберках код центрирования 
+}                                   /*  В оберках код центрирования 
                                                 with 960px, margin 0 auto , padding 0 10px
+
                                                      Отредачить все размеры - добавить max-with в текстах 
                                                         Выравнить все иконки, оставить для них место, прописать ширину для элемета/текста
-                                                        в карточках использовать маржины а не спейс-биитвин
+                                                        
                                                         в див можно обернуть целую секцию
                                                         у списков и загаловков обнулить маржин
-                                                        корзина оформить заказ можно сделать через инлайн-блок и указать маржин
+                                                        
                                                         каждый лейбл и инпут обернут в тег p
                                                         добавить гриды
                                                         добавить ариа-лейбл социанльным кнопкам с описанием соц сети и кнопкам которые добавляют товар в корзниу

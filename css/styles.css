@@ -550,7 +550,7 @@ input::-webkit-search-results-decoration { display: none; }
 .feature-box {
     display: flex;
     flex-direction: column;
-    width: 660px;
+    width: 640px;
     height: 400px;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -571,8 +571,6 @@ input::-webkit-search-results-decoration { display: none; }
     width: 300px;
     height: 410px;
     margin-top: 50px;
-
-    /* border: 4px solid black; */
 }
 .feature-list2 {
     display: flex;
@@ -582,16 +580,12 @@ input::-webkit-search-results-decoration { display: none; }
     height: 400px;
     margin: 0;
     padding: 0;
-
-    /* border: 4px solid yellow; */
 }
 .feature-item {
     padding: 12px 12px;
 }
 .feature-item a {
     display: flex;
-
-    /* border: 20px solid red;  */
 }
 .new::after {
     content: "new";
@@ -690,7 +684,6 @@ input::-webkit-search-results-decoration { display: none; }
     max-width: 660px;
     max-height: 240px;
     z-index: 2;
-
 }
 .background {
     max-width: 620px;
@@ -699,8 +692,7 @@ input::-webkit-search-results-decoration { display: none; }
     padding: 0;
     background-color: var(--deep-dark-blue);
     border: 2px solid var(--basic-white);
-    z-index: -1;
-    
+    z-index: -1;   
 }
 .gallary-button-back {
     margin: 0;
@@ -1455,7 +1447,6 @@ input::-webkit-search-results-decoration { display: none; }
     text-align: left;
     padding: 0;
     margin: 0;
-    text-align: left;
 
     /* border: 1px solid red; */
 }
@@ -1468,7 +1459,19 @@ input::-webkit-search-results-decoration { display: none; }
 .manufacturers label:hover {
     cursor: pointer;
 }
-.manufacturers label::after {
+.manufacturers label::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 23px;
+    height: 23px;
+    left: -10;
+    top: 0;
+    background: url(../img/checkbox-on.svg) 0 0 no-repeat;
+
+    /* border: 1px solid red; */
+}
+.manufacturer:checked label::after {
     content: "";
     position: absolute;
     display: block;
@@ -1476,15 +1479,13 @@ input::-webkit-search-results-decoration { display: none; }
     height: 23px;
     left: 0;
     top: 0;
-    background: url(../img/checkbox-on.svg) 0 0 no-repeat; /*(менять иконку с помощью JS через toggle ?)*/
+    background: url(../img/checkbox-off.svg) 0 0 no-repeat;
 }
 .manufacturers li:last-child {
     margin-bottom: 0;
 }
 .input-manufacturers {
-    margin-right: 25px;
-    padding-left: 0;
-    visibility: hidden;
+    display: none;
 }
 .input-manufacturers:focus {
 
@@ -1512,6 +1513,31 @@ input::-webkit-search-results-decoration { display: none; }
     padding-left: 0;
     margin: 0;
 }
+.supply label {
+    position: relative;
+}
+.supply label::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    border: 2px solid #C5C5C5;
+    border-radius: 50%;
+}
+.supply label::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    border: 5px solid #C5C5C5;
+    border-radius: 50%;
+}
 .supply li {
     margin-bottom: 15px;
 }
@@ -1519,8 +1545,7 @@ input::-webkit-search-results-decoration { display: none; }
     margin-bottom: 0;
 }
 .input-supply {
-    margin-right: 25px;
-    padding-left: 0;
+    display: none;
 }
 .button-show {
     font-family: "PT Sans","Arial",sans-serif;
@@ -1723,28 +1748,26 @@ input::-webkit-search-results-decoration { display: none; }
     margin: 0;
     padding: 0;
     padding-top: 70px;
-
-    /* border: 1px solid red; */
+    align-items: flex-start;
 }                            
-.wrap-about-perforator {
-    max-width: 960px;
-    margin: 0 auto;
-}
 .header-about-perforator {
+    max-width: 360px;
+    height: 38px;
+    margin: 0;
+    padding: 0;
+    margin-left: 160px;
     font-family: "Cuprum","Arial",sans-serif;
     font-weight: 700;
     font-size: 28px;
     line-height: 22px;
     text-transform: uppercase;
-    width: 400px;
-    height: 38px;
     color: #000000;
     box-sizing: border-box;
-    margin: 0;
 }
 .text-about-perforator {
     margin: 0;
     padding: 0;
+    margin-left: 160px;
     font-family: "PT Sans","Arial",sans-serif;
     font-weight: 400;
     font-size: 13px;

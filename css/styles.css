@@ -323,7 +323,6 @@ input::-webkit-search-results-decoration { display: none; }
     font-family: "Cuprum Italic", Georgia, serif;
     font-size: 16px;
     color: var(--bright-red);
-    align-items: flex-start;
 }
 .contacts {
     display: flex;
@@ -1267,9 +1266,6 @@ input::-webkit-search-results-decoration { display: none; }
     width: 960px;
     margin: 0;
     padding-bottom: 0;
-
-
-    /* border: 2px solid saddlebrown; */
 }
 .footer-logo {
     display: block;
@@ -1300,6 +1296,10 @@ input::-webkit-search-results-decoration { display: none; }
     text-decoration: underline;
     color: var(--basic-white);
 }
+
+/* Footer adress/offer  */
+
+
 .footer-line {
     display: flex;
     justify-content: space-between;
@@ -1338,6 +1338,9 @@ input::-webkit-search-results-decoration { display: none; }
     text-decoration: underline;
     color: var(--yellow);
 }
+
+/* Footer social */
+
 .background-wrap-social {
     background-color: var(--deep-dark-blue);
 }
@@ -1349,8 +1352,6 @@ input::-webkit-search-results-decoration { display: none; }
     width: 960px;
     height: 80px;
     background-color: var(--deep-dark-blue);
-
-    /* border: 4px solid red; */
 }
 .footer-info {
     font-family: "Cuprum", "Arial", sans-serif;
@@ -1360,16 +1361,11 @@ input::-webkit-search-results-decoration { display: none; }
 }
 .footer-social {
     display: flex;
-    /* увеличить область клика */
 }
-.path_one:hover {
-    fill: #c62e38;
+.social-button path:hover:not(:last-child) {
+    fill: #c62e38;                                      /*КАК сделать здесь hover*/
     transition: 1.6;
 }
-/* .path_two:hover {
-    fill: #DC91D8;
-    transition: 1.6;
-} */
 .feedback {
     font-family: "Cuprum", "Arial", sans-serif;
     font-size: 16px;
@@ -1873,6 +1869,9 @@ input::-webkit-search-results-decoration { display: none; }
 .footer-catalog {
     margin-top: 0;
 }
+
+/* Modal  */
+
 .modal {
     text-align: center;
     position: fixed;
@@ -1883,17 +1882,31 @@ input::-webkit-search-results-decoration { display: none; }
     margin: auto;
     background-color: var(--basic-white);
     border: 2px solid var(--deep-dark-blue);
+    z-index: 2;
     box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+.modal-close {
+    position: absolute;
+    top: 0;
+    right: -34px;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    border: 0;
+    background-color: transparent;
 }
 /* Modal Login */
 
 .modal-login {
-    /* display: none; */
-    top: 120px;
+    display: none;
+    top: 170px;
     bottom: auto;
     max-width: 350px;
     max-height: 359px;
     padding: 30px 60px;
+}
+.modal-show {
+    display: block;
 }
 .modal-login h2 {
     font-size: 24px;
@@ -1916,12 +1929,12 @@ input::-webkit-search-results-decoration { display: none; }
     padding: 10px 20px;
     outline: none;
 }
-.login-user {
+.login-user,
+.login-password {
     color: var(--bright-red);
 }
 .login-help {
     display: flex;
-    /* justify-content: space-around; */
     margin: 20px 0;
 }
 .checkbox-indicator {
@@ -1965,7 +1978,7 @@ input::-webkit-search-results-decoration { display: none; }
     display: none;
 }
 .restore {
-    margin-left: 120px;
+    margin-left: auto;
     color: #000000;
 }
 .modal-button {
@@ -1982,25 +1995,13 @@ input::-webkit-search-results-decoration { display: none; }
 
 /* Modal Lost */
 
-/* Сделать размер инпута по-меньше выравнрить весь контент по середине */
-
-.modal-close {
-    position: absolute;
-    top: 0;
-    right: -34px;
-    width: 22px;
-    height: 22px;
-    cursor: pointer;
-    border: 0;
-    background-color: transparent;
-}
 .modal-lost {
     display: none;
     top: auto;
-    bottom: 320px;
+    bottom: 120px;
     max-width: 350px;
     max-height: 359px;
-    padding: 20px 50px;
+    padding: 30px 60px;
 }
 .form-send-mail {
     width: 100%;
@@ -2009,10 +2010,12 @@ input::-webkit-search-results-decoration { display: none; }
 .wrap-send-mail {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 280px;
 	padding: 0 20px;
 	box-sizing: border-box;
     font-size: 14px;
+    margin-right: auto;
+    margin-left: auto;
 }
 .wrap-send-mail div {
     font-size: 18px;
@@ -2027,7 +2030,9 @@ input::-webkit-search-results-decoration { display: none; }
 	box-sizing: border-box;
 }
 .wrap-send-mail label {
+    display: inline-block;
 	font-weight: bold;
+    text-align: left;
 }
 .wrap-send-mail input {
     font-family: "Cuprum", sans-serif;
@@ -2039,7 +2044,8 @@ input::-webkit-search-results-decoration { display: none; }
 .wrap-send-mail .button-send-mail {
     margin-bottom: 20px;
     width: 50%; 
-    padding: 15px;
+    padding: 11px;
+    margin-left: auto;
 	margin-top: 10px;
 	background: none;
 	border: none;
